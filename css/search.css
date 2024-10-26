@@ -1,0 +1,53 @@
+/* Style pour le conteneur des résultats de recherche */
+#search_output {
+    display: flex;
+    flex-wrap: wrap; /* Pour faire passer les éléments à la ligne si nécessaire */
+    justify-content: flex-start; /* Aligne les éléments à gauche */
+    gap: 15px; /* Espacement entre les éléments */
+    margin-top: 20px; /* Ajustement de la marge supérieure */
+    padding: 0 20px; /* Espace sur les côtés */
+}
+
+/* Style pour chaque résultat (affiche de film) */
+#search_output .single-video {
+    flex: 0 0 calc(16% - 15px); /* Réduit la taille des vidéos à environ 16% de la largeur sur grands écrans (6 vidéos par ligne) */
+    margin-bottom: 20px;
+    background-color: #1b1b1b; /* Optionnel : couleur de fond pour l'esthétique */
+    border-radius: 8px;
+}
+
+/* Style pour l'image et le texte */
+#search_output .video-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Arrondi des images */
+}
+
+#search_output .video-item-content {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Media query pour les écrans moyens (tablettes) */
+@media (max-width: 1024px) {
+    #search_output .single-video {
+        flex: 0 0 calc(25% - 15px); /* Les vidéos prennent 25% de la largeur (4 vidéos par ligne) sur les écrans moyens */
+    }
+}
+
+/* Media query pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+    #search_output .single-video {
+        flex: 0 0 calc(50% - 10px); /* Les vidéos prennent 50% de la largeur (2 vidéos par ligne) sur les petits écrans */
+        margin-bottom: 15px;
+    }
+}
+
+/* Media query pour les très petits écrans */
+@media (max-width: 480px) {
+    #search_output .single-video {
+        flex: 0 0 calc(50% - 10px); /* Deux vidéos par ligne même sur les très petits écrans */
+        margin-bottom: 15px;
+    }
+}

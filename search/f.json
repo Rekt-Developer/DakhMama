@@ -1,0 +1,231 @@
+[
+    {
+        "nom": "Nowhere",
+        "affiche": "img/film/Nowhere/Nowhere-affiche.jpg",
+        "emplacement": "film/nowhere.html"
+    },
+    {
+        "nom": "Deadpool & Wolverine",
+        "affiche": "img/film/deadpool-et-wolverine/deadpool-et-wolverine-affiche.webp",
+        "emplacement": "film/Deadpool-et-Wolverine.html"
+    },
+    {
+        "nom": "Athena",
+        "affiche": "img/film/Athena/Athena-affiche.jpg",
+        "emplacement": "film/athena.html"
+    },
+    {
+        "nom": "3 jours max",
+        "affiche": "img/film/3-jours-max/3-jours-max-affiche.jpg",
+        "emplacement": "film/3-jours-max.html"
+    },
+    {
+        "nom": "30 jours max",
+        "affiche": "img/film/30-jours-max/30-jours-max-affiche.jpg",
+        "emplacement": "film/30-jours-max.html"
+    },
+    {
+        "nom": "Alibi.com 2",
+        "affiche": "img/film/Alibi.com-2/Alibi.com-2-affiche.jpg",
+        "emplacement": "film/Alibi.com-2.html"
+    },
+    {
+        "nom": "American Nightmare 5 : Sans Limites",
+        "affiche": "img/film/American-Nightmare-5-Sans-Limites/American-Nightmare-5-Sans-Limites-affiche.jpg",
+        "emplacement": "film/american-nightmare-5-sans-limites.html"
+    },
+    {
+        "nom": "BAC Nord",
+        "affiche": "img/film/BAC-Nord/BAC-Nord-affiche.jpg",
+        "emplacement": "film/Alibi.com-2.html"
+    },
+    {
+        "nom": "Back to Black",
+        "affiche": "img/film/back-to-black/Back-to-Black-affiche.jpg",
+        "emplacement": "film/back-to-black.html"
+    },
+    {
+        "nom": "Barbare",
+        "affiche": "img/film/Barbare/Barbare-affiche.jpg",
+        "emplacement": "film/barbare.html"
+    },
+    {
+        "nom": "Dune Deuxième partie",
+        "affiche": "img/film/dune-deuxieme-partie/dune-deuxieme-partie-affiche.webp",
+        "emplacement": "film/dune-deuxième-partie.html"
+    },
+    {
+        "nom": "Furiosa Une saga Mad Max",
+        "affiche": "img/film/Furiosa-Une-saga-Mad-Max/Furiosa-Une-saga-Mad-Max-affiche.webp",
+        "emplacement": "film/furiosa-une-saga-Mad-Max.html"
+        
+    },
+    {
+        "nom": "Godzilla x Kong Le Nouvel Empire",
+        "affiche": "img/film/Godzilla-x-Kong-Le-Nouvel-Empire/Godzilla-x-Kong-Le-Nouvel-Empire-affiche.jpg",
+        "emplacement": "film/godzilla-x-kong-le-nouvel-empire.html"
+        
+    },
+    {
+        "nom": "Gran Turismo",
+        "affiche": "img/film/Gran-Turismo/Gran-Turismo-affiche.jpg",
+        "emplacement": "film/gran-turismo.html"
+        
+    },
+    {
+        "nom": "Insidious The Red Door",
+        "affiche": "img/film/Insidious-The-Red-Door/Insidious-The-Red-Door-affiche.jpg",
+        "emplacement": "film/insidious-the-red-door.html"
+        
+    },
+    {
+        "nom": "Iron Claw",
+        "affiche": "img/film/Iron-Claw/Iron-Claw-affiche.jpg",
+        "emplacement": "film/iron-claw.html"
+        
+    },
+    {
+        "nom": "Jorker",
+        "affiche": "img/film/Joker/Joker-affiche.jpg",
+        "emplacement": "film/joker.html"
+        
+    },
+    {
+        "nom": "Jurassic World Le Monde d’après",
+        "affiche": "img/film/Jurassic-World-Le-Monde-d’après/Jurassic-World-Le-Monde-d’après-affiche.jpg",
+        "emplacement": "film/jurassic-world-le-monde-d’après.html"
+        
+    },
+    {
+        "nom": "La Nonne La Malédiction de Sainte-Lucie",
+        "affiche": "img/film/La-Nonne-La-Malédiction-de-Sainte-Lucie/La-Nonne-La-Malédiction-de-Sainte-Lucie-affiche.jpg",
+        "emplacement": "film/la-nonne-la-malédiction-de-Sainte-Lucie.html"
+        
+    },
+    {
+        "nom": "La Planète des Singes Le Nouveau Royaume",
+        "affiche": "img/film/la-planet-des-singes/la-planet-des-singes-affiche.webp",
+        "emplacement": "film/la-planète-des-singes-le-nouveau-royaume.html"
+        
+    },
+    {
+        "nom": "Le Cercle des neiges",
+        "affiche": "img/film/Le-Cercle-des-neiges/Le-Cercle-des-neiges-affiche.jpg",
+        "emplacement": "film/le-cercle-des-neiges.html"
+        
+    },
+    {
+        "nom": "Les SEGPA au ski",
+        "affiche": "img/film/Les-SEGPA-au-ski/Les-SEGPA-au-ski-affiche.jpg",
+        "emplacement": "film/les-segpa-au-ski.html"
+        
+    },
+    {
+        "nom": "Les Tuche 4",
+        "affiche": "img/film/Les-Tuche-4/Les-Tuche-4-affiche.jpg",
+        "emplacement": "film/les-tuche-4.html"
+        
+    },
+    {
+        "nom": "Madame Web",
+        "affiche": "img/film/Madame-Web/Madame-Web-affiche.jpg",
+        "emplacement": "film/madame-web.html"
+        
+    },
+    {
+        "nom": "Maison de retraite 2",
+        "affiche": "img/film/Maison-de-retraite-2/Maison-de-retraite-2-affiche.jpg",
+        "emplacement": "film/maison-de-retraite-2.html"
+        
+    },
+    {
+        "nom": "Mayday",
+        "affiche": "img/film/Mayday/Mayday-affiche.jpg",
+        "emplacement": "film/mayday.html"
+        
+    },
+    {
+        "nom": "Moi moche et méchant 4",
+        "affiche": "img/film/moi-moche-et-mechant-4/moi-moche-et-mechant-affiche.webp",
+        "emplacement": "film/moi-moche-et-méchant-4.html"
+        
+    },
+    {
+        "nom": "Napoléon",
+        "affiche": "img/film/Napoléon/napoleon-affiche.webp",
+        "emplacement": "film/napoléon.html"
+        
+    },
+    {
+        "nom": "Oppenheimer",
+        "affiche": "img/film/Oppenheimer/Oppenheimer-affiche.jpg",
+        "emplacement": "film/oppenheimer.html"
+        
+    },
+    {
+        "nom": "Scream VI",
+        "affiche": "img/film/Scream-VI/Scream-VI-affiche.jpg",
+        "emplacement": "film/Scream-vi.html"
+        
+    },
+    {
+        "nom": "Sous la Seine",
+        "affiche": "img/film/sous-la-seine/sous-la-seine-affiche.webp",
+        "emplacement": "film/sous-la-seine.html"
+        
+    },
+    {
+        "nom": "Smile",
+        "affiche": "img/film/Smile/Smile-affiche.jpg",
+        "emplacement": "film/smile.html"
+        
+    },
+    {
+        "nom": "Spider Man : No Way Home",
+        "affiche": "img/film/Spider-Man-No-Way-Home/Spider-Man-No-Way-Home-affiche.jpg",
+        "emplacement": "film/spider-man-no-way-home.html"
+        
+    },
+    {
+        "nom": "Terrifier 2",
+        "affiche": "img/film/Terrifier-2/Terrifier-2-affiche.jpg",
+        "emplacement": "film/terrifier-2.html"
+        
+    },
+    {
+        "nom": "The Fall Guy",
+        "affiche": "img/film/The-Fall-Guy/The-Fall-Guy-affiche.jpg",
+        "emplacement": "film/the-fall-guy.html"
+        
+    },
+    {
+        "nom": "The Marvels",
+        "affiche": "img/film/The-Marvels/The-Marvels-affiche.jpg",
+        "emplacement": "film/the-marvels.html"
+        
+    },
+    {
+        "nom": "Top Gun Maverick",
+        "affiche": "img/film/Top-Gun-Maverick/Top-Gun-Maverick-affiche.jpg",
+        "emplacement": "film/top-gun-maverick.html"
+        
+    },
+    {
+        "nom": "Twisters",
+        "affiche": "img/film/Twisters/Twisters-affiche.jpg",
+        "emplacement": "film/twisters.html"
+        
+    },
+    {
+        "nom": "Un p'tit truc en plus",
+        "affiche": "img/film/un-petit-truc-en-plus/un-petit-truc-en-plus-affiche.webp",
+        "emplacement": "film/Un-p'tit-truc-en-plus.html"
+        
+    },
+    {
+        "nom": "Vice versa 2",
+        "affiche": "img/film/vice-versa-2/vice-versa-2-affiche.webp",
+        "emplacement": "film/vice-versa-2.html"
+        
+    }
+]
