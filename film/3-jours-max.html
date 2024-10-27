@@ -154,85 +154,78 @@
        <script src="../js/custom-main.js"></script>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-        <!-- Combined FWDEVPlayer and Plyr Script -->
-        <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', () => {
-                const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute','pip','settings',  'fullscreen',];
-
-                const player = new Plyr('#player', {
-                    controls: playerControls,
-                    quality: {
-                        default: 720,
-                        options: [720]
-                    },
-                    playsinline: true,
-                    keyboard: { focused: true, global: true },
-                    fullscreen: { enabled: true, fallback: true, iosNative: true },
-                    disableContextMenu: true,
-                    i18n: {
-                        play: 'Play',
-                        pause: 'Pause',
-                        mute: 'Silence',
-                        unmute: 'Son activé',
-                        enableCaptions: 'Activer les sous-titres',
-                        disableCaptions: 'Désactiver les sous-titres',
-                        enterFullscreen: 'Plein écran',
-                        exitFullscreen: 'Sortir du plein écran',
-                        settings: 'Réglages',
-                        speed: 'Vitesse',
-                        quality: 'Qualité',
-                        loop: 'Boucle',
-                        disabled: 'Désactivé',
-                        enabled: 'Activé',
-                        captions: 'Sous-titres',
-                    },
-                });
-
-  
-                const videoElement = document.getElementById('player');
-        const hlsSource = videoElement.querySelector('source').src;
-
-        if (Hls.isSupported()) {
-            const hls = new Hls();
-            hls.loadSource(hlsSource);
-            hls.attachMedia(videoElement);
-
-            // Reload video when it ends
-            videoElement.addEventListener('ended', () => {
-                hls.loadSource(hlsSource);
-                videoElement.play();  // Replay video
+       <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'pip', 'settings', 'fullscreen'];
+            const player = new Plyr('#player', {
+                controls: playerControls,
+                quality: {
+                    default: 720,
+                    options: [720]
+                },
+                playsinline: true,
+                keyboard: { focused: true, global: true },
+                fullscreen: { enabled: true, fallback: true, iosNative: true },
+                disableContextMenu: true,
+                i18n: {
+                    play: 'Play',
+                    pause: 'Pause',
+                    mute: 'Silence',
+                    unmute: 'Son activé',
+                    enableCaptions: 'Activer les sous-titres',
+                    disableCaptions: 'Désactiver les sous-titres',
+                    enterFullscreen: 'Plein écran',
+                    exitFullscreen: 'Sortir du plein écran',
+                    settings: 'Réglages',
+                    speed: 'Vitesse',
+                    quality: 'Qualité',
+                    loop: 'Boucle',
+                    disabled: 'Désactivé',
+                    enabled: 'Activé',
+                    captions: 'Sous-titres',
+                },
             });
-
-            // Handle HLS errors
-            hls.on(Hls.Events.ERROR, (event, data) => {
-                if (data.fatal) {
-                    switch (data.type) {
-                        case Hls.ErrorTypes.NETWORK_ERROR:
-                            console.log("Erreur réseau, tentative de récupération...");
-                            hls.startLoad();
-                            break;
-                        case Hls.ErrorTypes.MEDIA_ERROR:
-                            console.log("Erreur média, tentative de récupération...");
-                            hls.recoverMediaError();
-                            break;
-                        default:
-                            console.log("Erreur fatale, rechargement...");
-                            hls.destroy();
-                            hls.loadSource(hlsSource);
-                            hls.attachMedia(videoElement);
-                            break;
-                    }
+    
+            const videoElement = document.getElementById('player');
+            const hlsSource = videoElement.querySelector('source').src;
+    
+            // Utiliser l'URL comme clé unique pour la vidéo
+            const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
+    
+            // Charger le temps de lecture
+            const loadVideoTime = () => {
+                const savedTime = localStorage.getItem(storageKey);
+                if (savedTime) {
+                    videoElement.currentTime = parseFloat(savedTime);
                 }
-            });
-        } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-            // Fallback for native HLS support (Safari)
-            videoElement.src = hlsSource;
-            videoElement.addEventListener('ended', () => {
-                videoElement.play(); // Replay video
-            });
-        }
-    });
-        </script>
+            };
+    
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(hlsSource);
+                hls.attachMedia(videoElement);
+    
+                videoElement.addEventListener('ended', () => {
+                    hls.loadSource(hlsSource);
+                    videoElement.play(); // Replay video
+                });
+    
+                // Sauvegarder le temps de lecture
+                videoElement.addEventListener('timeupdate', () => {
+                    localStorage.setItem(storageKey, videoElement.currentTime);
+                });
+    
+                loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                // Fallback for native HLS support (Safari)
+                videoElement.src = hlsSource;
+                videoElement.addEventListener('ended', () => {
+                    videoElement.play(); // Replay video
+                });
+                loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+            }
+        });
+    </script>
       </div>
     </div>
   </div>
