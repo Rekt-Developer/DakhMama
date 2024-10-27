@@ -1,12 +1,35 @@
-/* Fond du corps de la page */
-body {
-    background-color: #0d071e !important;
+/* Styles pour le fond principal de la page */
+body, html {
+    background-color: #0d071e !important; /* Fond principal */
     margin: 0;
-    padding-top: env(safe-area-inset-top);
+    height: 100vh; /* Utiliser la hauteur totale de l'écran */
+    padding-top: env(safe-area-inset-top); /* Espace en haut pour l'encoche */
+    padding-bottom: env(safe-area-inset-bottom); /* Espace en bas pour l'encoche */
+    box-sizing: border-box;
 }
 
-/* Bande en haut avec la couleur de l'encoche */
+/* Conteneur principal si nécessaire */
+.main-container {
+    background-color: #0d071e; /* Assurez la couleur de fond du conteneur */
+    height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    overflow: auto; /* Permet de scroller si le contenu dépasse */
+}
+
+/* Barre supérieure avec la couleur autour de l'encoche */
 .header {
+    background-color: #b81b0e; /* Couleur de l'encoche */
+    padding-top: env(safe-area-inset-top); /* Espace supplémentaire en haut */
+}
+
+/* Boutons ou éléments de navigation dans la barre supérieure */
+.header .logo {
+    color: #ffffff; /* Couleur du texte du logo */
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+
+/* Si vous avez une barre de navigation spécifique */
+.navbar {
     background-color: #b81b0e;
     padding-top: env(safe-area-inset-top);
 }
