@@ -1,0 +1,12 @@
+/* Fond du corps de la page */
+body {
+    background-color: #0d071e !important;
+    margin: 0;
+    padding-top: env(safe-area-inset-top);
+}
+
+/* Bande en haut avec la couleur de l'encoche */
+.header {
+    background-color: #b81b0e;
+    padding-top: env(safe-area-inset-top);
+}
