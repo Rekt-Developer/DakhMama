@@ -1,35 +1,56 @@
-/* Styles pour le fond principal de la page */
+/* Style général pour le fond de la page */
 body, html {
-    background-color: #0d071e !important; /* Fond principal */
+    background-color: #0d071e !important;
     margin: 0;
-    height: 100vh; /* Utiliser la hauteur totale de l'écran */
-    padding-top: env(safe-area-inset-top); /* Espace en haut pour l'encoche */
-    padding-bottom: env(safe-area-inset-bottom); /* Espace en bas pour l'encoche */
-    box-sizing: border-box;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Conteneur principal si nécessaire */
+/* Conteneur principal qui occupe tout l'espace disponible */
 .main-container {
-    background-color: #0d071e; /* Assurez la couleur de fond du conteneur */
-    height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-    overflow: auto; /* Permet de scroller si le contenu dépasse */
+    background-color: #0d071e;
+    flex-grow: 1;
+    padding-top: env(safe-area-inset-top); /* Pour l'encoche sur les appareils mobiles */
+    padding-bottom: env(safe-area-inset-bottom);
+    overflow: auto;
 }
 
 /* Barre supérieure avec la couleur autour de l'encoche */
 .header {
-    background-color: #b81b0e; /* Couleur de l'encoche */
-    padding-top: env(safe-area-inset-top); /* Espace supplémentaire en haut */
-}
-
-/* Boutons ou éléments de navigation dans la barre supérieure */
-.header .logo {
-    color: #ffffff; /* Couleur du texte du logo */
-    padding-left: 10px;
-    font-size: 1.5rem;
-}
-
-/* Si vous avez une barre de navigation spécifique */
-.navbar {
     background-color: #b81b0e;
     padding-top: env(safe-area-inset-top);
+    padding-bottom: 10px; /* Ajuster si besoin */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo et titre du site dans la barre supérieure */
+.header .logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+/* Pour centrer et agrandir les icônes de recherche et menu */
+.header .icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+/* Assurer que le contenu principal est bien visible */
+.content {
+    background-color: #0d071e;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Assurez-vous que la couleur du texte et des éléments est bien visible */
+h1, h2, h3, p, a {
+    color: #ffffff;
 }
