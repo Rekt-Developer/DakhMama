@@ -2111,6 +2111,17 @@ ul.nav > li a.active, ul.nav > li:hover > a {
 	margin:5px 0;
 	display:inline-block;
 }
+.filter-list-area .page-select{
+	background: #b81b0e ;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 9px 15px 8px 15px;
+	font-weight: 700;
+	border-radius: 4px;
+	margin:5px 0;
+	display:inline-block;
+}
 .show-listing .pagination {
     margin-top: 0;
 }
