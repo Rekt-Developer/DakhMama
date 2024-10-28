@@ -150,6 +150,11 @@
         "emplacement": "../film/Scream-vi.html"
     },
     {
+        "nom": "Le Comte de Monte-Cristo",
+        "affiche": "../img/film/le-comte-de-montecristo/le-comte-de-montecristo-affiche.jpg",
+        "emplacement": "../film/le-comte-de-montecristo.html"
+    },
+    {
         "nom": "Sous la Seine",
         "affiche": "../img/film/sous-la-seine/sous-la-seine-affiche.webp",
         "emplacement": "../film/sous-la-seine.html"

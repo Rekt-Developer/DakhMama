@@ -175,6 +175,11 @@
         
     },
     {
+        "nom": "Le Comte de Monte-Cristo",
+        "affiche": "img/film/le-comte-de-montecristo/le-comte-de-montecristo-affiche.jpg",
+        "emplacement": "film/le-comte-de-montecristo.html"
+    },
+    {
         "nom": "Smile",
         "affiche": "img/film/Smile/Smile-affiche.jpg",
         "emplacement": "film/smile.html"
