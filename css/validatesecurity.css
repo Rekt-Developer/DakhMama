@@ -1,0 +1,641 @@
+/* Style pour le message de sÃ©curitÃ© */
+#security-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff; /* Texte blanc pour plus de contraste */
+    background-image: 
+    linear-gradient(165deg, #00000066, #00000000 35.71%),
+    linear-gradient(152deg, #0d6efd4a, #f4433636 70.71%),
+    linear-gradient(336deg, #b81b0e , #b81b0e  80.71%);
+    z-index: 98;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+/* Style pour le titre */
+#security-message h2 {
+    font-size: 40px; /* AjustÃ© pour les petits Ã©crans */
+    margin-bottom: 25px;
+    color: #fff; /* Texte blanc pour le titre */
+    font-weight: 1000; /* Titre en gras */
+}
+
+/* Animation pour rendre le bouton plus attractif */
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Ombre initiale */
+    }
+    50% {
+        transform: scale(1.1); /* Le bouton s'agrandit lÃ©gÃ¨rement */
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.8); /* Ombre plus forte */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Retour Ã  l'Ã©tat initial */
+    }
+}
+
+/* Style pour le bouton */
+#security-button {
+    font-size: 20px;
+    padding: 12px 24px;
+    background-color: #009b06; /* Couleur verte pour le bouton lorsqu'il est actif */
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espace au-dessus du bouton */
+    animation: buttonPulse 3s infinite; /* Animation continue pour attirer l'attention */
+}
+
+/* Couleur du bouton en Ã©tat de chargement */
+#security-button.loading {
+    background-color: #9E9E9E; /* Couleur grise discrÃ¨te pour le bouton lorsqu'il est en chargement */
+    cursor: not-allowed; /* Curseur de chargement */
+    animation: none; /* DÃ©sactive l'animation pendant le chargement */
+}
+
+/* Couleur du bouton au survol */
+#security-button:hover:not(.loading) {
+    background-color: #388E3C; /* Couleur de survol plus foncÃ©e pour le bouton */
+}
+
+
+#p-security-message {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+#p2-security-message {
+    color: #ff5934;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-top: -10px
+}
+
+
+/* Style pour la barre de progression */
+.progress-container {
+    width: 90%; /* AjustÃ© pour mieux s'adapter aux petits Ã©crans */
+    max-width: 500px; /* Largeur maximale pour les grands Ã©crans */
+    background-color: #000; /* Fond noir pour la barre de progression */
+    border-radius: 10px;
+    margin: 20px auto; /* Centrer la barre */
+}
+
+/* Animation dynamique de la barre de progression */
+@keyframes extravagant-progress {
+    0% {
+        width: 0;
+        background-color: #4CAF50;
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+        transform: scaleX(1);
+    }
+    100% {
+        background-color: #FFEB3B;
+        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8);
+        transform: scaleX(1);
+    }
+}
+
+/* Style pour la barre de progression */
+.progress-bar {
+    height: 20px;
+    width: 0;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    animation: extravagant-progress 0s ease-in-out 1;
+    transition: width 0.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.8); /* Ombre initiale */
+}
+
+
+/* Style pour le pourcentage de progression */
+.progress-percentage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: -15px; /* Espace ajustÃ© pour un alignement plus proche de la barre */
+}
+
+/* Style pour le bouton "Visionner le film" */
+#view-movie-button {
+    font-size: 20px;
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Couleur verte pour le bouton */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#view-movie-button:hover {
+    background-color: #388E3C; /* Couleur de survol plus foncÃ©e pour le bouton */
+}
+
+/* Style pour le lecteur vidÃ©o */
+#video-player {
+    display: none;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #000; /* Fond noir pour le lecteur vidÃ©o */
+}
+
+/* Classe pour masquer des Ã©lÃ©ments */
+.hidden {
+    display: none;
+}
+
+/* Media Queries pour les petits Ã©crans */
+@media (max-width: 768px) {
+    #security-message {
+        padding: 30px 10px; /* Ajuste le padding pour plus de confort sur les petits Ã©crans */
+    }
+
+    #security-message h2 {
+        font-size: 29px;
+        margin-bottom: 38px;
+    }
+
+    #security-button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .progress-container {
+        width: 90%;
+        max-width: 400px; /* RÃ©duit la largeur maximale pour les trÃ¨s petits Ã©crans */
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+
+    #progress-percentage {
+        font-size: 16px;
+        margin-top: -16px; /* RÃ©duit l'espacement au-dessus du pourcentage */
+    }
+
+    #view-movie-button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+/* Media Queries pour les trÃ¨s petits Ã©crans */
+@media (max-width: 480px) {
+    #security-message {
+        padding: 40px 10px; /* Augmente encore le padding pour les trÃ¨s petits Ã©crans */
+    }
+
+    #security-message h2 {
+        font-size: 23px;
+        margin-bottom: 17px;
+        margin-top: 17px;
+    }
+
+    #security-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .progress-container {
+        width: 90%;
+        max-width: 300px; /* RÃ©duit la largeur maximale pour les trÃ¨s petits Ã©crans */
+    }
+
+    .progress-bar {
+        height: 10px;
+    }
+
+    #progress-percentage {
+        font-size: 14px;
+        margin-top: -16px;
+        color: #fff;
+    }
+
+    #view-movie-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 360px) {
+
+#p-security-message {
+    font-size: 13.5px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+#p2-security-message {
+    color: #ff4242;
+    font-size: 13.5px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-top: -10px
+}
+#security-message h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+}
+}
+
+/* Style de base pour le bouton */
+.vibrating-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b81b0e ;
+    color: #fff;
+    padding: 6px 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14.5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(113, 14, 180, 0.7);
+    max-width: 280px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+#delete-ads a :hover {
+    color: #fff;
+}
+
+/* Style de l'icÃ´ne */
+.gem-icon {
+    width: 20px;
+    height: auto;
+    margin-left: 8px;
+}
+
+
+/* Animation de changement de couleur */
+@keyframes changeColor {
+    0% { background-color: #b81b0e; }
+    10% { background-color: #b81b0e; }
+    100% { background-color: #00c6ff; }
+}
+
+
+#div-discord {
+    text-align:center; 
+    margin-bottom:25px !important; 
+    padding: 8px 6px; 
+    background-color: #e9dbf3; 
+    border-radius: 14px; 
+    margin: auto; 
+    width: 450px; 
+    max-width: 90%; 
+    opacity: 0.7;
+}
+
+#a-discord {
+    font-size: 10.5px; 
+    font-weight: 700;
+    text-transform: uppercase;
+    color:  #141414;
+    text-align: center;
+    text-decoration: none;
+}
+
+#img-discord {
+    margin-top: -4px;
+}
+
+@media (min-width: 626px) {
+#div-security-margin{
+    margin-top: 80px !important; 
+    margin-bottom: 80px !important;
+}
+}
+
+@media (max-width: 625px) {
+#div-security-margin{
+    margin-top: 80px !important; 
+    margin-bottom: 80px !important;
+}
+}
+
+@media (max-width: 450px) {
+#div-security-margin{
+    margin-top: 80px !important; 
+    margin-bottom: 80px !important;
+}
+}
+
+@media (max-width: 375px) {
+#div-security-margin{
+    margin-top: 80px !important; 
+    margin-bottom: 80px !important;
+}
+}
+
+@media (max-width: 285px) {
+#div-security-margin{
+    margin-top: 100px !important; 
+    margin-bottom: 100px !important;
+}
+}
+
+@media (min-width:700px) {
+#regarder{
+  position: absolute;
+  transform: translate(550px, 250px);
+}
+}
+
+@media (min-width:1000px) {
+#regarder{
+  position: absolute;
+  transform: translate(850px, 250px);
+}
+}
+
+@media (min-width:1350px) {
+#regarder{
+  position: absolute;
+  transform: translate(1100px, 250px);
+}
+}
+
+@media (max-width:699px) {
+#regarder{
+  position: absolute;
+  transform: translate(450px, 150px);
+}
+}
+
+@media (max-width:585px) {
+#regarder{
+  position: absolute;
+  transform: translate(350px, 150px);
+}
+}
+
+@media (max-width:470px) {
+#regarder{
+  position: absolute;
+  transform: translate(275px, 150px);
+}
+}
+
+@media (max-width:410px) {
+#regarder{
+  position: absolute;
+  transform: translate(200px, 190px);
+}
+}
+
+@media (max-width:325px) {
+#regarder{
+  position: absolute;
+  transform: translate(150px, 190px);
+}
+}
+
+@media (max-width:275px) {
+#regarder{
+  position: absolute;
+  transform: translate(100px, 220px);
+}
+}
+
+#icon-fa-fa-play{
+  background-color: #fff;
+  color: #960EF3;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  z-index: 1;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1);
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  padding-left: 3px;
+}
+
+#ripple{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35);
+  -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35);
+  -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35);
+  -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35);
+  -webkit-animation: ripple 3s infinite;
+  -moz-animation: ripple 3s infinite;
+  -ms-animation: ripple 3s infinite;
+  -o-animation: ripple 3s infinite;
+  animation: ripple 3s infinite;
+}
+
+#ad-warning {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: -10px !important;
+    width: fit-content;
+    margin: 10px auto;
+    z-index: 99;
+}
+
+#learn-more-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+#learn-more-button:hover {
+    background-color: #0056b3;
+}
+
+#countdown {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 1000;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2.5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+    margin: 10px auto;
+    z-index: 99;
+}
+
+#title, #description {
+    display: none;
+}
+
+#post-ad-buttons {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+#post-ad-buttons.show-buttons {
+    display: flex;
+    opacity: 1;
+}
+
+#post-ad-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#learn-more-button-post {
+    background-color: #0d6efd;
+}
+
+#learn-more-button-post:hover {
+    background-color: #0056b3;
+}
+
+#watch-movie-button {
+    background-color: #4CAF50;
+}
+
+#watch-movie-button:hover {
+    background-color: #45a049;
+}
+
+.show-buttons {
+    display: flex;
+    opacity: 1;
+}
+
+#start-ad-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+    margin-top: 50px;
+}
+
+#start-ad-button:hover {
+    background-color: #45a049;
+}
+
+@media (min-width: 625px) {
+    #learn-more-button, #post-ad-buttons {
+        display: inline-flex;
+        vertical-align: middle;
+    }
+
+    #post-ad-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 350px) {
+    #learn-more-button {
+        font-size: 15px;
+    }
+}
+
+#ad-video {
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+@media (min-width: 626px) {
+    #ad-video {
+        margin-top: 100px;
+    }
+}
+
+#video-container {
+    position: relative;
+    width: 640px;
+    height: 360px;
+}
+
+#loading-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+}
