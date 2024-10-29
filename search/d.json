@@ -80,9 +80,24 @@
         "emplacement": "../film/iron-claw.html"
     },
     {
-        "nom": "Jorker",
+        "nom": "Joker",
         "affiche": "../img/film/Joker/Joker-affiche.jpg",
         "emplacement": "../film/joker.html"
+    },
+    {
+        "nom": "Dune : Première partie",
+        "affiche": "../img/film/dune-première-partie/dune-première-partie-slider.jpg",
+        "emplacement": "../film/dune-première-partie.html"
+    },
+    {
+        "nom": "Planet Dune",
+        "affiche": "../img/film/planet-dune/planet-dune-affiche.jpg",
+        "emplacement": "../film/planet-dune.html"
+    },
+    {
+        "nom": "Maison de retraite ",
+        "affiche": "../img/film/Maison-de-retraite/Maison-de-retraite-affiche.jpg",
+        "emplacement": "../film/maison-de-retraite.html"
     },
     {
         "nom": "Jurassic World Le Monde d’après",
@@ -153,6 +168,11 @@
         "nom": "Le Comte de Monte-Cristo",
         "affiche": "../img/film/le-comte-de-montecristo/le-comte-de-montecristo-affiche.jpg",
         "emplacement": "../film/le-comte-de-montecristo.html"
+    },
+    {
+        "nom": "Joker : Folie à deux",
+        "affiche": "../img/film/joker-folie-à-deux/joker-folie-à-deux-affiche.jpg",
+        "emplacement": "../film/joker-folie-à-deux.html"
     },
     {
         "nom": "Sous la Seine",
