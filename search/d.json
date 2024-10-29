@@ -86,7 +86,7 @@
     },
     {
         "nom": "Dune : Première partie",
-        "affiche": "../img/film/dune-première-partie/dune-première-partie-slider.jpg",
+        "affiche": "../img/film/dune-première-partie/dune-première-partie-affiche.jpg",
         "emplacement": "../film/dune-première-partie.html"
     },
     {
@@ -96,7 +96,7 @@
     },
     {
         "nom": "Maison de retraite ",
-        "affiche": "../img/film/Maison-de-retraite/Maison-de-retraite-affiche.jpg",
+        "affiche": "../img/film/maison-de-retraite/maison-de-retraite-affiche.jpg",
         "emplacement": "../film/maison-de-retraite.html"
     },
     {
