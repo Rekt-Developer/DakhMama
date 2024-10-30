@@ -125,6 +125,11 @@
         "emplacement": "../film/les-segpa-au-ski.html"
     },
     {
+        "nom": "Les SEGPA",
+        "affiche": "../img/film/les-segpa/les-segpa-affiche.jpg",
+        "emplacement": "../film/les-segpa.html"
+    },
+    {
         "nom": "Les Tuche 4",
         "affiche": "../img/film/Les-Tuche-4/Les-Tuche-4-affiche.jpg",
         "emplacement": "../film/les-tuche-4.html"
@@ -163,6 +168,36 @@
         "nom": "Scream VI",
         "affiche": "../img/film/Scream-VI/Scream-VI-affiche.jpg",
         "emplacement": "../film/Scream-vi.html"
+    },
+    {
+        "nom": "Scream 5",
+        "affiche": "../img/film/scream-5/Scream-5-affiche.jpg",
+        "emplacement": "../film/scream-5.html"
+        
+    },
+    {
+        "nom": "Scream 4",
+        "affiche": "../img/film/scream-4/Scream-4-affiche.jpg",
+        "emplacement": "../film/scream-4.html"
+        
+    },
+    {
+        "nom": "Scream 3",
+        "affiche": "../img/film/scream-3/Scream-3-affiche.jpg",
+        "emplacement": "../film/scream-3.html"
+        
+    },
+    {
+        "nom": "Scream 2",
+        "affiche": "../img/film/scream-2/Scream-2-affiche.jpg",
+        "emplacement": "../film/scream-2.html"
+        
+    },
+    {
+        "nom": "Scream",
+        "affiche": "../img/film/scream/Scream-affiche.jpg",
+        "emplacement": "../film/scream.html"
+        
     },
     {
         "nom": "Le Comte de Monte-Cristo",
