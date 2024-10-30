@@ -177,25 +177,25 @@
     },
     {
         "nom": "Scream 4",
-        "affiche": "../img/film/scream-4/Scream-4-affiche.jpg",
+        "affiche": "../img/film/scream-4/scream-4-affiche.jpg",
         "emplacement": "../film/scream-4.html"
         
     },
     {
         "nom": "Scream 3",
-        "affiche": "../img/film/scream-3/Scream-3-affiche.jpg",
+        "affiche": "../img/film/scream-3/scream-3-affiche.jpg",
         "emplacement": "../film/scream-3.html"
         
     },
     {
         "nom": "Scream 2",
-        "affiche": "../img/film/scream-2/Scream-2-affiche.jpg",
+        "affiche": "../img/film/scream-2/scream-2-affiche.jpg",
         "emplacement": "../film/scream-2.html"
         
     },
     {
         "nom": "Scream",
-        "affiche": "../img/film/scream/Scream-affiche.jpg",
+        "affiche": "../img/film/scream/scream-affiche.jpg",
         "emplacement": "../film/scream.html"
         
     },
