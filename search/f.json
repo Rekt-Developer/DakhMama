@@ -67,6 +67,17 @@
         
     },
     {
+        "nom": "Godzilla Minus One",
+        "affiche": "img/film/godzilla-minus-one/Godzilla-minus-one-affiche.jpg",
+        "emplacement": "film/godzilla-minus-one.html"
+        
+    },
+    {
+        "nom": "Godzilla vs. Kong",
+        "affiche": "img/film/godzilla-vs-kong/godzilla-vs-kong-affiche.jpg",
+        "emplacement": "film/godzilla-vs-kong.html"
+    },
+    {
         "nom": "Gran Turismo",
         "affiche": "img/film/Gran-Turismo/Gran-Turismo-affiche.jpg",
         "emplacement": "film/gran-turismo.html"
