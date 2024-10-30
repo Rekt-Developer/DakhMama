@@ -245,6 +245,11 @@
         "emplacement": "../film/top-gun-maverick.html"
     },
     {
+        "nom": "Top Gun",
+        "affiche": "../img/film/top-gun/top-gun-affiche.jpg",
+        "emplacement": "../film/top-gun.html"
+    },
+    {
         "nom": "Twisters",
         "affiche": "../img/film/Twisters/Twisters-affiche.jpg",
         "emplacement": "../film/twisters.html"
