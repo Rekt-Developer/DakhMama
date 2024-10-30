@@ -176,6 +176,12 @@
         
     },
     {
+        "nom": "Napoléon - Version Longue",
+        "affiche": "img/film/Napoléon/napoleon-affiche.webp",
+        "emplacement": "film/napoléon-version-longue.html"
+        
+    },
+    {
         "nom": "Oppenheimer",
         "affiche": "img/film/Oppenheimer/Oppenheimer-affiche.jpg",
         "emplacement": "film/oppenheimer.html"
