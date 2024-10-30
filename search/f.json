@@ -117,6 +117,11 @@
         
     },
     {
+        "nom": "La Nonne",
+        "affiche": "img/film/la-nonne/la-nonne-affiche.jpg",
+        "emplacement": "film/la-nonne.html"
+    },
+    {
         "nom": "La Planète des Singes Le Nouveau Royaume",
         "affiche": "img/film/la-planet-des-singes/la-planet-des-singes-affiche.webp",
         "emplacement": "film/la-planète-des-singes-le-nouveau-royaume.html"
