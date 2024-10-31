@@ -10,26 +10,26 @@
     <meta name="description" content="Avec Crimson, profitez des derniers films et séries en VF HD, gratuitement et sans aucune publicité ! Ce qui ressemble à un rêve devient une réalité grâce à la révolution Crimson !" />
 
     <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+  <link rel="icon" type="image/png" href="../img/favicon/favicon.png">
 
     <!-- Manifest -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Crimson">
-    <link rel="manifest" href="pwa/manifest.json">
+    <link rel="manifest" href="../pwa/manifest.json">
 
     <!-- LOAD LOCAL CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/megamenu.css">
-    <link rel="stylesheet" href="css/style-three.css" id="theme">
-    <link rel="stylesheet" href="css/ionicons.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/splide.min.css">
-    <link rel="stylesheet" href="css/player-crimson.css">
-    <link rel="stylesheet" href="css/jquery-eu-cookie-law-popup.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/megamenu.css">
+    <link rel="stylesheet" href="../css/style-three.css" id="theme">
+    <link rel="stylesheet" href="../css/ionicons.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/splide.min.css">
+    <link rel="stylesheet" href="../css/player-crimson.css">
+    <link rel="stylesheet" href="../css/jquery-eu-cookie-law-popup.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/search.css">
 
     <!-- SweetAlert2 -->
 	<script src="js/sweetalert2@11.js"></script>
@@ -45,17 +45,17 @@
 
         .error-container {
             text-align: center;
-            padding:    -10px 0; /* Réduit l'espace en haut de la section */
+            padding:    100px 0; /* Réduit l'espace en haut de la section */
         }
 
         .error-container img {
-            width: 500px; /* Taille de l'image */
-            margin-bottom: -40px; /* Réduit l'écart entre l'image et le texte */
+            width:      300px; /* Taille de l'image */
+            margin-bottom: 13px; /* Réduit l'écart entre l'image et le texte */
         }
 
         .error-message {
-            margin-top: -40px; /* Écart réduit entre l'image et le texte */
-            font-size: 14px; /* Taille du texte plus petit */
+            margin-top: 13px; /* Écart réduit entre l'image et le texte */
+            font-size: 40px; /* Taille du texte plus petit */
         }
 
         .page-note-found {
@@ -82,7 +82,7 @@
                 <div class="mod-menu">
                     <div class="row">
                         <div class="col-2">
-                            <a href="index.html" title="logo" class="logo"><img src="img/logo.png" alt="logo" title="logo"></a>
+                            <a href="../index.html" title="logo" class="logo"><img src="../img/logo.png" alt="logo" title="logo"></a>
                         </div>
                         <div class="col-7 nav-order-last nopadding">
                             <div class="main-nav leftnav">
@@ -91,9 +91,9 @@
                                 </ul>
                                 <div id="menu" class="collapse header-menu">
                                     <ul class="nav vfx-item-nav">
-                                        <li><a href="index.html" class="" title="home">Home</a></li>
-                                        <li><a href="films.html" class="Active" title="Films">Films</a></li>
-                                        <li style="border-bottom: 0px solid !important;"><a href="direct.html" class="" title="En direct">En direct</a>
+                                        <li><a href="../index.html" class="" title="home">Home</a></li>
+                                        <li><a href="../films.html" class="Active" title="Films">Films</a></li>
+                                        <li style="border-bottom: 0px solid !important;"><a href="../direct.html" class="" title="En direct">En direct</a>
                                             <ul class="dm-align-2 mega-list"> </ul>
                                     </div>
                                 </div>
@@ -121,12 +121,12 @@
     <div class="section">
         <div class="container">
             <div class="row section-padding error-container">
-                <span><img src="img/404.png"></span>
+                <span><img src="../img/hors-ligne.png"></span>
                 <div class="error-message">
-                    <h1>Page Introuvable</h1>
-                    <p>La page que vous recherchez n'est pas disponible ❤️</p>
+                    <h1>Vous êtes hors ligne</h1>
+                    <p>Veuillez vous connecter pour accéder à toutes les fonctionnalités. ❤️</p>
                 </div>
-                <a href="index.html" class="vfx-item-btn-danger page-note-found text-uppercase">Retour à l'accueil</a>
+                <a href="../index.html" class="vfx-item-btn-danger page-note-found text-uppercase">Retour à l'accueil</a>
             </div>
         </div>
     </div>
@@ -178,16 +178,16 @@ async function showSuggestions(query) {
     }
 }
 </script>  
-<script src="js/sw.js"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/megamenu.js"></script>
-<script src="js/splide.min.js"></script>
-<script src="js/custom-main.js"></script>
-<script src="js/jquery-eu-cookie-law-popup.js"></script>
+<script src="service-worker.js"></script>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.nice-select.min.js"></script>
+<script src="../js/megamenu.js"></script>
+<script src="../js/splide.min.js"></script>
+<script src="../js/custom-main.js"></script>
+<script src="../js/jquery-eu-cookie-law-popup.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <script>

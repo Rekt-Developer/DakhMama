@@ -531,23 +531,24 @@ async function showSuggestions(query) {
 }
 </script> 
 <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js')
-            .then((registration) => {
-                console.log('Service Worker enregistré avec succès :', registration);
-            })
-            .catch((error) => {
-                console.error('Échec de l\'enregistrement du Service Worker :', error);
+// Vérifiez si le navigateur prend en charge les Service Workers
+if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw/service-worker.js') // Assurez-vous que le chemin correspond à votre fichier sw.js
+                    .then(registration => {
+                        console.log('Service Worker enregistré avec succès:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Erreur lors de l\'enregistrement du Service Worker:', error);
+                    });
             });
-        });
-    }
+        }
 </script>
 
 
  
 <!-- Load Local JS -->
-<script src="https://unpkg.com/workbox-sw@latest"></script>
+
 
 <script src="sw/service-worker.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
