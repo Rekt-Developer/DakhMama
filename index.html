@@ -531,18 +531,15 @@ async function showSuggestions(query) {
 }
 </script> 
 <script>
-// Vérifiez si le navigateur prend en charge les Service Workers
-if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw/service-worker.js') // Assurez-vous que le chemin correspond à votre fichier sw.js
-                    .then(registration => {
-                        console.log('Service Worker enregistré avec succès:', registration);
-                    })
-                    .catch(error => {
-                        console.log('Erreur lors de l\'enregistrement du Service Worker:', error);
-                    });
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw/service-worker.js')
+            .then(registration => {
+                console.log("Service Worker enregistré avec succès :", registration);
+            })
+            .catch(error => {
+                console.log("Échec de l'enregistrement du Service Worker :", error);
             });
-        }
+    }
 </script>
 
 

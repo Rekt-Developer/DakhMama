@@ -116,6 +116,16 @@
         "emplacement": "../film/jurassic-world-le-monde-d’après.html"
     },
     {
+        "nom": "Jurassic World : Fallen Kingdom",
+        "affiche": "../img/film/Jurassic-World-fallen-kingdom/Jurassic-World-fallen-kingdom-affiche.jpg",
+        "emplacement": "../film/jurassic-world-fallen-kingdom.html"
+    },
+    {
+        "nom": "Jurassic World",
+        "affiche": "../img/film/jurassic-world/jurassic-world-affiche.jpg",
+        "emplacement": "../film/jurassic-world.html"
+    },
+    {
         "nom": "La Nonne La Malédiction de Sainte-Lucie",
         "affiche": "../img/film/La-Nonne-La-Malédiction-de-Sainte-Lucie/La-Nonne-La-Malédiction-de-Sainte-Lucie-affiche.jpg",
         "emplacement": "../film/la-nonne-la-malédiction-de-Sainte-Lucie.html"
