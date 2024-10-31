@@ -41,8 +41,6 @@
 	<link rel="stylesheet" href="css/validatesecurity.css">
     <link rel="stylesheet" href="css/search.css">
 
-     <!-- SW -->
-    <script src="https://storage.googleapis.com/workbox-cdn/releases/6.5.3/workbox-sw.js"></script>
 	
     <!-- SweetAlert2 -->
 	<script src="js/sweetalert2@11.js"></script>
@@ -531,9 +529,25 @@ async function showSuggestions(query) {
         searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
     }
 }
-</script>  
+</script> 
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw/service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Service Worker registration failed:', error);
+            });
+    });
+}
+</script>
+
+
+</script> 
 <!-- Load Local JS -->
-<script src="js/sw.js"></script>
+<script src="sw/service-worker.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
