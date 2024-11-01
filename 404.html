@@ -91,7 +91,7 @@
                 <div class="mod-menu">
                     <div class="row">
                         <div class="col-2">
-                            <a href="../index.html" href="index.html" title="logo" class="logo"><img src="../img/logo.png" src="img/logo.png"  alt="logo" title="logo"></a>
+                            <a  href="index.html" title="logo" class="logo"><img  src="img/logo.png"  alt="logo" title="logo"></a>
                         </div>
                         <div class="col-7 nav-order-last nopadding">
                             <div class="main-nav leftnav">
@@ -100,8 +100,8 @@
                                 </ul>
                                 <div id="menu" class="collapse header-menu">
                                     <ul class="nav vfx-item-nav">
-                                        <li><a href="../index.html" href="index.html" class="" title="home">Home</a></li>
-                                        <li><a href="../films.html" href="films.html" class="Active" title="Films">Films</a></li>
+                                        <li><a  href="index.html" class="" title="home">Home</a></li>
+                                        <li><a href="films.html" class="Active" title="Films">Films</a></li>
                                         <li style="border-bottom: 0px solid !important;"><a href="../direct.html" href="direct.html" class="" title="En direct">En direct</a>
                                             <ul class="dm-align-2 mega-list"> </ul>
                                     </div>
@@ -130,7 +130,7 @@
     <div class="section">
         <div class="container">
             <div class="row section-padding error-container">
-                <span><img src="../img/404.png" src="img/404.png"></span>
+                <span><img src="img/404.png"></span>
                 <div class="error-message">
                     <h1>Page Introuvable</h1>
                     <p>La page que vous recherchez n'est pas disponible ❤️</p>
@@ -157,37 +157,6 @@
    
 <div class="eupopup eupopup-bottom"></div>
 <script>
-async function showSuggestions(query) {
-    const searchOutput = document.getElementById('search_output');
-    searchOutput.innerHTML = ''; // Réinitialiser les résultats
-
-    if (!query) return; // Si la requête est vide, ne rien faire
-
-    const response = await fetch('../search/f.json');
-    const movies = await response.json();
-
-    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
-
-    if (filteredMovies.length > 0) {
-        filteredMovies.forEach(movie => {
-            const movieDiv = document.createElement('div');
-            movieDiv.classList.add('single-video');
-            movieDiv.innerHTML = `
-                <a href="${movie.emplacement}">
-                    <div class="video-img">
-                        <span class="video-item-content">${movie.nom}</span>
-                        <img src="${movie.affiche}" alt="${movie.nom}">
-                    </div>
-                </a>
-            `;
-            searchOutput.appendChild(movieDiv);
-        });
-    } else {
-        searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
-    }
-}
-</script>  
-<script>
     async function showSuggestions(query) {
         const searchOutput = document.getElementById('search_output');
         searchOutput.innerHTML = ''; // Réinitialiser les résultats
@@ -203,14 +172,14 @@ async function showSuggestions(query) {
             filteredMovies.forEach(movie => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('single-video');
-                movieDiv.innerHTML = `
+                movieDiv.innerHTML = 
                     <a href="${movie.emplacement}">
                         <div class="video-img">
                             <span class="video-item-content">${movie.nom}</span>
                             <img src="${movie.affiche}" alt="${movie.nom}">
                         </div>
                     </a>
-                `;
+                ;
                 searchOutput.appendChild(movieDiv);
             });
         } else {
