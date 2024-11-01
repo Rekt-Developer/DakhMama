@@ -150,7 +150,7 @@ async function showSuggestions(query) {
 
     if (!query) return; // Si la requête est vide, ne rien faire
 
-    const response = await fetch('search/f.json');
+    const response = await fetch('../search/f.json');
     const movies = await response.json();
 
     const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
