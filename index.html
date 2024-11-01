@@ -21,11 +21,7 @@
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="img/favicon/favicon.png">
 	
-	<!-- manifest -->
-     <meta name="apple-mobile-web-app-capable" content="yes">
-     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-     <meta name="apple-mobile-web-app-title" content="Crimson">
-     <link rel="manifest" href="pwa/manifest.json">
+	<!-- soon pwa -->
 	
     <!-- LOAD LOCAL CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -530,24 +526,11 @@ async function showSuggestions(query) {
     }
 }
 </script> 
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw/service-worker.js')
-            .then(registration => {
-                console.log("Service Worker enregistré avec succès :", registration);
-            })
-            .catch(error => {
-                console.log("Échec de l'enregistrement du Service Worker :", error);
-            });
-    }
-</script>
 
 
  
 <!-- Load Local JS -->
 
-
-<script src="sw/service-worker.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
