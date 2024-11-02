@@ -45,7 +45,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
-    <meta name="8e1221ae1b607f5f7dae4e21897560c45012cc59" content="8e1221ae1b607f5f7dae4e21897560c45012cc59" />
+  
     <style type="text/css">
         .search .search-input input[type=text]::placeholder,
         .search .search-input input[type=text].focus {
@@ -135,7 +135,7 @@
                     <h1>Page Introuvable</h1>
                     <p>La page que vous recherchez n'est pas disponible ❤️</p>
                 </div>
-                <a href="../index.html" href="index.html" class="vfx-item-btn-danger page-note-found text-uppercase">Retour à l'accueil</a>
+                <a href="index.html" class="vfx-item-btn-danger page-note-found text-uppercase">Retour à l'accueil</a>
             </div>
         </div>
     </div>
@@ -172,14 +172,14 @@
             filteredMovies.forEach(movie => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('single-video');
-                movieDiv.innerHTML = 
+                movieDiv.innerHTML = `
                     <a href="${movie.emplacement}">
                         <div class="video-img">
                             <span class="video-item-content">${movie.nom}</span>
                             <img src="${movie.affiche}" alt="${movie.nom}">
                         </div>
                     </a>
-                ;
+                `;
                 searchOutput.appendChild(movieDiv);
             });
         } else {
