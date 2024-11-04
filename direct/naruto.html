@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="theme-color" content="#710EB4">  
+    <meta name="theme-color" content="#b81b0e">  
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Crimson">
     <title>Direct | Crimson LE site de streaming</title>
-    <meta name="description" content="Direct | Regarder bob l'éponge en streaming gratuitement et sans publicité ni inscription avec Crimson !" />
+    <meta name="description" content="Direct | Regarder Naruto en streaming gratuitement et sans publicité ni inscription avec Crimson !" />
     
   
   <!-- Favicon -->
 	<link rel="icon" type="image/png" href="../img/favicon/favicon.png">
    
 <!-- son pwa -->
-  
   
     <!-- LOAD LOCAL CSS -->
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -25,6 +24,7 @@
   <link rel="stylesheet" href="../css/splide.min.css">
   <link rel="stylesheet" href="../css/player-crimson.css">
   <link rel="stylesheet" href="../css/jquery-eu-cookie-law-popup.css">
+  <link rel="stylesheet" href="../css/search.css">
   <link rel="stylesheet" href="../css/search.css">
  
 
@@ -46,7 +46,7 @@
 </head>
 <body>
     <!-- Start Header -->
-      <header>
+    <header>
         <div class="main-menu"> 
             <nav class="header-section pin-style">
                 <div class="container-fluid">
@@ -103,18 +103,18 @@
                 <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 mb-4">
                     <div class="detail-poster-area">
                         <div class="dtl-poster-img">
-                            <img src="../img/direct/inazuma-eleven.png" alt="Inazuma Eleven" title="Inazuma Eleven" />
+                            <img src="../img/direct/Naruto.png" alt="Naruto" title="Naruto" />
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 mb-4">
                     <div class="poster-dtl-item">
-                        <h2><a title="Inazuma Eleven">Inazuma Eleven</a></h2>
+                        <h2><a title="Naruto">Naruto</a></h2>
                         <ul class="dtl-list-link">
-                            <li><a title="Sport">Sport</a></li>
+                            <li><a title="Chaîne de télévision">Série télévisée</a></li>
                         </ul>
-                        <h3>Profitez de Inazuma Eleven 24h/24h en direct avec Crimson !</h3>
+                        <h3>Profitez de Naruto 24h/24h en direct avec Crimson !</h3>
                     </div>
                 </div>
 
@@ -130,8 +130,7 @@
                     </nav>
                     <section class="tabs_item_block">
                         <div class="tab1">
-                                                        <p><strong id="warning-video-cam-sd">[⚠️ Ce programme n'est pas disponible sur certains appareils. ⚠]</strong></p>
-                            <p>Les membres de l´équipe de foot du Collège Raimon, dont le capitaine est Mark Evans, rêvent de gagner le championnat national. Pour réaliser leur rêve, ils devront vaincre les meilleures équipes du pays, parmi lesquelles il y a l´équipe de Jude Sharp, l´Académie Royale, qui a déjà gagné le championnat à plusieurs reprises. Même si au début ils sont démotivés, car il n´y a que sept joueurs, Mark réussit à convaincre Axel Blaze, un excellent joueur qui avait abandonné le foot depuis un bon bout de temps, pour qu´il se joigne à eux.</p>
+                            <p>Naruto Uzumaki, un adolescent ninja, lutte pour être reconnu et rêve de devenir le Hokage, le chef du village et le ninja le plus fort.</p>
                         </div>
                     </section>
                 </div>
@@ -139,10 +138,10 @@
                 <!-- Video Player Section -->
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 mb-5">
                     <!-- Player -->
-                    <video id="player" playsinline controls preload="auto" poster="../img/direct/inazuma-eleven-banner.jpg">
-                        <source id="video-source" src="https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/tf1plus/inazuma-eleven.m3u8" type="application/x-mpegURL">
+                    <video id="player" playsinline controls preload="auto" poster="../img/direct/Naruto-banner.webp">
+                        <source id="video-source" src="https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/tf1plus/naruto.m3u8" type="application/x-mpegURL">
                         <track kind="subtitles" label="Français" srclang="fr" src="sous-titres/subtitles.vtt" default>
-                        Votre navigateur ne prend pas en charge la balise vidéo.
+                        Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
                     </video>
                 </div>
 
@@ -263,14 +262,13 @@ async function showSuggestions(query) {
         searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
     }
 }
-</script>
-<script>
+</script> <script>
     // Fonction exécutée lors de l'utilisation du clic droit.
     $(document).bind("contextmenu", function() {
         // On indique au navigateur de ne pas réagir en cas de clic droit.
         return false;
     });
 </script>
- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>  
+ <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script> 
 </body>
 </html>
