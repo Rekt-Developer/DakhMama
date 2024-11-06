@@ -170,7 +170,7 @@
     
         if (!query) return; // Si la requête est vide, ne rien faire
     
-        const response = await fetch('../search/d.json');
+        const response = await fetch('../search/d.direct.json');
         const movies = await response.json();
     
         const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));

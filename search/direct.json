@@ -55,6 +55,11 @@
         "emplacement": "direct/star-academy.html"
     },
     {
+        "nom": "Danse avec les stars",
+        "affiche": "img/direct/danse-avec-les-stars.png",
+        "emplacement": "direct/danse-avec-les-stars.html"
+    },
+    {
         "nom": "Pluto Tv Film",
         "affiche": "img/direct/Pluto-Tv-Film.png",
         "emplacement": "direct/pluto-tv-films.html"

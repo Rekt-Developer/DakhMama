@@ -1,0 +1,109 @@
+[
+    {
+        "nom": "Inazuma Eleven",
+        "affiche": "../img/direct/inazuma-eleven.png",
+        "emplacement": "../direct/inazuma-eleven.html"
+    },
+    {
+        "nom": "Naruto",
+        "affiche": "../img/direct/Naruto.png",
+        "emplacement": "../direct/naruto.html"
+    },
+    {
+        "nom": "Boruto",
+        "affiche": "../img/direct/boruto.png",
+        "emplacement": "../direct/boruto.html"
+    },
+    {
+        "nom": "Bob l'éponge",
+        "affiche": "../img/direct/bob-l'éponge.png",
+        "emplacement": "../direct/bob-l'éponge.html"
+    },
+    {
+        "nom": "Xilam",
+        "affiche": "../img/direct/Xilam.png",
+        "emplacement": "../direct/xilam.html"
+    },
+    {
+        "nom": "Tortue Ninja",
+        "affiche": "../img/direct/Tortues-Ninja.png",
+        "emplacement": "../direct/tortue-ninja.html"
+    },
+    {
+        "nom": "Les Schtroumpfs",
+        "affiche": "../img/direct/les-schtroumpfs.png",
+        "emplacement": "../direct/les-schtroumpfs.html"
+    },
+    {
+        "nom": "South Park",
+        "affiche": "../img/direct/South-Park.png",
+        "emplacement": "../direct/south-park.html"
+    },
+    {
+        "nom": "Dora L'exploratrice",
+        "affiche": "../img/direct/Dora-L'exploratrice.png",
+        "emplacement": "../direct/Dora-L'exploratrice.html"
+    },
+    {
+        "nom": "Super Nanny",
+        "affiche": "../img/direct/super-nanny.png",
+        "emplacement": "../direct/super-nanny.html"
+    },
+    {
+        "nom": "Star Academy",
+        "affiche": "../img/direct/star-academy.png",
+        "emplacement": "../direct/star-academy.html"
+    },
+    {
+        "nom": "Danse avec les stars",
+        "affiche": "../img/direct/danse-avec-les-stars.png",
+        "emplacement": "../direct/danse-avec-les-stars.html"
+    },
+    {
+        "nom": "Pluto Tv Film",
+        "affiche": "../img/direct/Pluto-Tv-Film.png",
+        "emplacement": "../direct/pluto-tv-films.html"
+    },
+    {
+        "nom": "Pluto Tv Series",
+        "affiche": "../img/direct/Pluto-Tv-Series.png",
+        "emplacement": "../direct/Pluto-Tv-Series.html"
+    },
+    {
+        "nom": "Pluto Tv Kids",
+        "affiche": "../img/direct/Pluto-Tv-Kids.png",
+        "emplacement": "../direct/pluto-tv-kids.html"
+    },
+    {
+        "nom": "Arte",
+        "affiche": "../img/direct/Arte.png",
+        "emplacement": "../direct/arte.html"
+    },
+    {
+        "nom": "Bfm TV",
+        "affiche": "../img/direct/BFM-TV.png",
+        "emplacement": "../direct/bfm-tv.html"
+    },
+
+    {
+        "nom": "France 2",
+        "affiche": "../img/direct/france-2.png",
+        "emplacement": "../direct/France-2.html"
+    },
+    {
+        "nom": "France 3",
+        "affiche": "../img/direct/france-3.png",
+        "emplacement": "../direct/France-3.html"
+    },
+
+    {
+        "nom": "France 4",
+        "affiche": "../img/direct/france-4.png",
+        "emplacement": "../direct/France-4.html"
+    },
+    {
+        "nom": "France 5",
+        "affiche": "../img/direct/france-5.png",
+        "emplacement": "../direct/France-5.html"
+    }
+]
