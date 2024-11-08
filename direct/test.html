@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Crimson">
     <title>Direct | Crimson LE site de streaming</title>
-    <meta name="description" content="Direct | Regarder Pluto tv Séries en streaming gratuitement et sans publicité ni inscription avec Crimson !" />
+    <meta name="description" content="Direct | Regarder tf1 en streaming gratuitement et sans publicité ni inscription avec Crimson !" />
     
   
   <!-- Favicon -->
@@ -30,9 +30,9 @@
             window.location.href = "intent://crimson-streaming.github.io/crimson/déinstallation.html#Intent;scheme=https;package=com.android.chrome;end";
         }
 </script>
-   
-<!-- son pwa -->
-  
+
+     <!-- soon pwa -->
+	
   
     <!-- LOAD LOCAL CSS -->
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -44,6 +44,7 @@
   <link rel="stylesheet" href="../css/splide.min.css">
   <link rel="stylesheet" href="../css/player-crimson.css">
   <link rel="stylesheet" href="../css/jquery-eu-cookie-law-popup.css">
+  <link rel="stylesheet" href="../css/search.css">
   <link rel="stylesheet" href="../css/search.css">
  
 
@@ -65,7 +66,7 @@
 </head>
 <body>
     <!-- Start Header -->
-      <header>
+    <header>
         <div class="main-menu"> 
             <nav class="header-section pin-style">
                 <div class="container-fluid">
@@ -122,18 +123,18 @@
                 <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 mb-4">
                     <div class="detail-poster-area">
                         <div class="dtl-poster-img">
-                            <img src="../img/direct/Pluto-Tv-Series.png" alt="Pluto tv Séries" title="Pluto tv Séries" />
+                            <img src="../img/direct/TF1.png" alt="TF1" title="TF1" />
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 mb-4">
                     <div class="poster-dtl-item">
-                        <h2><a title="Pluto tv Séries">Pluto tv Séries</a></h2>
+                        <h2><a title="TF1">TF1</a></h2>
                         <ul class="dtl-list-link">
-                            <li><a title="plateforme de streaming">plateforme de streaming</a></li>
+                            <li><a title="Chaîne de télévision">Chaîne de télévision</a></li>
                         </ul>
-                        <h3>Profitez des Séries de pluto tv 24h/24h en direct avec Crimson !</h3>
+                        <h3>Profitez de TF1 24h/24h en direct avec Crimson !</h3>
                     </div>
                 </div>
 
@@ -149,8 +150,7 @@
                     </nav>
                     <section class="tabs_item_block">
                         <div class="tab1">
-                                                        <p><strong id="warning-video-cam-sd">[⚠️ Ce programme n'est pas disponible sur certains appareils. ⚠]</strong></p>
-                            <p>Pluto TV Series propose un large éventail de séries télévisées, allant des classiques emblématiques aux émissions contemporaines.</p>
+                            <p>Télévision française 1, plus connue sous son sigle TF1 et couramment appelée La Une, est la première et plus ancienne chaîne de télévision généraliste nationale française. </p>
                         </div>
                     </section>
                 </div>
@@ -158,10 +158,10 @@
                 <!-- Video Player Section -->
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 mb-5">
                     <!-- Player -->
-                    <video id="player" playsinline controls preload="auto" poster="../img/direct/Pluto-Tv-Series-banner.jpg">
-                        <source id="video-source" src="http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f8ed2d1c34c2300073bf02c/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=8e055172-1f2c-11ef-86d8-5d587df108c6&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=4bf0c406-dfcb-4037-8de6-bd12c393c6a5" type="application/x-mpegURL">
+                    <video id="player" playsinline controls preload="auto" poster="../img/direct/tf1-banner.webp">
+                        <source id="video-source" src="https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/canalplus/canalplusclair-hd.m3u8" type="application/x-mpegURL">
                         <track kind="subtitles" label="Français" srclang="fr" src="sous-titres/subtitles.vtt" default>
-                        Votre navigateur ne prend pas en charge la balise vidéo.
+                        Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
                     </video>
                 </div>
 
@@ -282,7 +282,7 @@ async function showSuggestions(query) {
         searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
     }
 }
-</script>
+</script> 
 <script>
     // Fonction exécutée lors de l'utilisation du clic droit.
     $(document).bind("contextmenu", function() {
@@ -290,6 +290,6 @@ async function showSuggestions(query) {
         return false;
     });
 </script>
- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>  
+ <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script> 
 </body>
 </html>
