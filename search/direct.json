@@ -105,5 +105,10 @@
         "nom": "France 5",
         "affiche": "img/direct/france-5.png",
         "emplacement": "direct/France-5.html"
+    },
+    {
+        "nom": "TMC",
+        "affiche": "img/direct/tmc.png",
+        "emplacement": "direct/tmc.html"
     }
 ]
