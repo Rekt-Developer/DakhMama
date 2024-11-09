@@ -110,5 +110,10 @@
         "nom": "TMC",
         "affiche": "img/direct/tmc.png",
         "emplacement": "direct/tmc.html"
+    },
+    {
+        "nom": "TFX",
+        "affiche": "img/direct/tfx.png",
+        "emplacement": "direct/tfx.html"
     }
 ]
