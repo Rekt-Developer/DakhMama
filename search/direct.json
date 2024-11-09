@@ -115,5 +115,10 @@
         "nom": "TFX",
         "affiche": "img/direct/tfx.png",
         "emplacement": "direct/tfx.html"
+    },
+    {
+        "nom": "C NEWS",
+        "affiche": "img/direct/cnews.png",
+        "emplacement": "direct/c-news.html"
     }
 ]
