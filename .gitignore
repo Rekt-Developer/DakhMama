@@ -10,6 +10,7 @@ Thumbs.db
 node_modules/
 dist/
 cache/
+dowload/
 
 # Ignorer tous les fichiers `.m3u`, sauf `playlist.m3u` si nécessaire
 *.m3u
