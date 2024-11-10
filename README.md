@@ -50,7 +50,8 @@ Nous travaillons en permanence pour ajouter de nouvelles fonctionnalités et am�
 - **Nouveaux canaux en direct** avec du contenu exclusif et une programmation variée.
 - **Ajout de séries** Bientôt, Crimson proposera également une large sélection de séries en plus des films, avec des options pour suivre les saisons et épisodes facilement.
 
-🚀 Rejoignez l'équipe Crimson
+## 🚀 Rejoignez l'équipe Crimson
+
 Crimson est sur le point de se lancer, et nous recherchons des personnes motivées prêtes à contribuer bénévolement pour faire de cette plateforme de streaming un véritable succès ! Que vous soyez développeur ou non-développeur, si vous avez des compétences en développement web, en gestion de contenu, ou dans d'autres domaines pertinents, votre expertise est la bienvenue.
 
 Comment postuler ?
