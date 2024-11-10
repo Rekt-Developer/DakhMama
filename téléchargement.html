@@ -150,78 +150,82 @@
     </div>
 
     <script>
-      // Charger les informations du film depuis localStorage
-const films = JSON.parse(localStorage.getItem("filmsTelecharges")) || [];
-const film = films[films.length - 1]; // Récupérer le dernier film ajouté
+        // Charger les informations du film depuis localStorage
+        const films = JSON.parse(localStorage.getItem("filmsTelecharges")) || [];
+        const film = films[films.length - 1]; // Récupérer le dernier film ajouté
 
-if (film) {
-    document.getElementById("film-nom").textContent = film.nom;
-    document.getElementById("film-affiche").src = film.affiche;
-}
-
-function lancerTelechargement() {
-    const progressFill = document.getElementById("progress-fill");
-    const downloadInfo = document.getElementById("download-info");
-    const downloadButton = document.getElementById("download-button");
-
-    // Désactiver le bouton pendant le téléchargement
-    downloadButton.disabled = true;
-    downloadInfo.textContent = "Téléchargement en cours...";
-
-    // Nouvelle requête pour le téléchargement
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", film.url, true);
-    xhr.responseType = "blob";
-
-    xhr.onprogress = function (event) {
-        if (event.lengthComputable) {
-            const pourcentage = (event.loaded / event.total) * 100;
-            progressFill.style.width = pourcentage + "%";
-            downloadInfo.textContent = `Téléchargement : ${Math.round(pourcentage)}%`;
+        if (film) {
+            document.getElementById("film-nom").textContent = film.nom;
+            document.getElementById("film-affiche").src = film.affiche;
         }
-    };
 
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            const blob = xhr.response;
-            const url = URL.createObjectURL(blob);
+        function lancerTelechargement() {
+            const progressFill = document.getElementById("progress-fill");
+            const downloadInfo = document.getElementById("download-info");
+            const downloadButton = document.getElementById("download-button");
 
-            // Utilisation d'un délai pour forcer le téléchargement sur mobile
-            setTimeout(() => {
-                const a = document.createElement("a");
-                a.href = url;
-                a.download = `${film.nom}.mp4`;  // Nom du fichier téléchargé
-                document.body.appendChild(a);
-                a.click();
+            // Désactiver le bouton pendant le téléchargement
+            downloadButton.disabled = true;
+            downloadInfo.textContent = "Téléchargement en cours...";
 
-                // Libérer l'URL et nettoyer
-                URL.revokeObjectURL(url);
-                document.body.removeChild(a);
+            // Téléchargement de la vidéo
+            fetch(film.url)
+                .then(response => {
+                    if (!response.ok) throw new Error("Erreur lors du téléchargement");
+                    const totalSize = parseInt(response.headers.get("content-length"), 10);
+                    let loadedSize = 0;
 
-                downloadInfo.textContent = "Téléchargement terminé !";
-                films[films.length - 1].etat = "Téléchargement terminé !";
-                localStorage.setItem("filmsTelecharges", JSON.stringify(films));
-                downloadButton.textContent = "Téléchargement terminé";
-                downloadButton.disabled = false;
-            }, 100);
-        } else {
-            downloadInfo.textContent = "Erreur lors du téléchargement.";
-            downloadButton.disabled = false;
+                    const reader = response.body.getReader();
+                    const stream = new ReadableStream({
+                        start(controller) {
+                            function push() {
+                                reader.read().then(({ done, value }) => {
+                                    if (done) {
+                                        controller.close();
+                                        return;
+                                    }
+                                    loadedSize += value.length;
+                                    const pourcentage = (loadedSize / totalSize) * 100;
+                                    progressFill.style.width = pourcentage + "%";
+                                    downloadInfo.textContent = `Téléchargement : ${Math.round(pourcentage)}%`;
+
+                                    controller.enqueue(value);
+                                    push();
+                                });
+                            }
+                            push();
+                        }
+                    });
+
+                    return new Response(stream).blob();
+                })
+                .then(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = `${film.nom}.mp4`;// Nom du fichier téléchargé
+                    a.style.display = "none";
+                    document.body.appendChild(a);
+                    a.click();
+
+                    // Libérer l'URL créée
+                    URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+
+                    // Mettre à jour l'état dans localStorage
+                    downloadInfo.textContent = "Téléchargement terminé !";
+                    films[films.length - 1].etat = "Téléchargement terminé !";
+                    localStorage.setItem("filmsTelecharges", JSON.stringify(films));
+                    downloadButton.textContent = "Téléchargement terminé";
+                })
+                .catch(error => {
+                    console.error("Erreur lors du téléchargement :", error);
+                    downloadInfo.textContent = "Erreur lors du téléchargement.";
+                    downloadButton.disabled = false;
+                });
         }
-    };
-
-    xhr.onerror = function () {
-        downloadInfo.textContent = "Erreur lors du téléchargement.";
-        downloadButton.disabled = false;
-    };
-
-    xhr.send();
-}
-
-// Associer l'événement de clic au bouton
-document.getElementById("download-button").addEventListener("click", lancerTelechargement);
-
     </script>
+
 </body>
 
 </html>
