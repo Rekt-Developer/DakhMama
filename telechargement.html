@@ -45,7 +45,7 @@
         .search .search-input input[type=text]:focus {
             background: #0d071e !important;
         }
-  /* Conteneur principal des films */
+/* Conteneur principal des films */
 #filmsListContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -64,7 +64,7 @@
     border-radius: 10px;
     background: #fff;
     padding: 5px;
-    height: 350px;
+    height: 500px; /* Augmentée pour accueillir une image plus grande */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -77,7 +77,7 @@
 
 .video-img {
     position: relative;
-    height: 200px;
+    height:    350px; /* Augmentation de la hauteur de l'image */
     overflow: hidden;
     border-radius: 10px;
 }
@@ -108,7 +108,7 @@
     background-color: #ddd;
     border-radius: 5px;
     overflow: hidden;
-    margin: 5px 0;
+    margin: -10px 0;
 }
 
 .progress-bar-fill {
@@ -132,12 +132,14 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
-    margin: 5px;
+    margin: 2px;
 }
 
 .delete-button {
     background-color: #e74c3c;
+    margin: 2px;
 }
+
 
     </style>
 </head>
