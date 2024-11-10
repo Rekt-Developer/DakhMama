@@ -50,8 +50,8 @@ Nous travaillons en permanence pour ajouter de nouvelles fonctionnalités et am�
 - **Nouveaux canaux en direct** avec du contenu exclusif et une programmation variée.
 - **Ajout de séries** Bientôt, Crimson proposera également une large sélection de séries en plus des films, avec des options pour suivre les saisons et épisodes facilement.
 
-## 📝 Contribuer à Crimson
+🚀 Rejoignez l'équipe Crimson
+Nous sommes toujours à la recherche de personnes passionnées pour rejoindre l’équipe Crimson ! Que vous soyez développeur ou non-développeur, si vous avez des compétences en développement web, en gestion de contenu ou dans d'autres domaines pertinents, votre expertise est la bienvenue.
 
-Actuellement, les contributions sont limitées à l'équipe de développement de Crimson. Cependant, nous apprécions tous les retours et suggestions d’améliorations pour continuer d’évoluer.
-
-
+Comment postuler ?
+Vous pouvez retrouver notre Formulaire de Recrutement directement depuis la page d'accueil de notre site ou en suivant ce lien : [Formulaire de Recrutement Crimson](https://docs.google.com/forms/d/e/1FAIpQLSc41C1T8fawbCqw7hvYfsxdkGMLVTWwZKefqxuTHqxRVDRr_w/viewform?usp=sf_link). Indiquez-y vos compétences et motivations, et nous vous contacterons si une opportunité correspond à votre profil.
