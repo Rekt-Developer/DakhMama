@@ -2,8 +2,6 @@
 
 **Crimson** est une plateforme de streaming dédiée aux passionnés de cinéma et de divertissement en continu. Nous proposons une vaste sélection de films récents et une diffusion en direct 24h/24 de programmes diversifiés. Conçu pour être sans publicité et axé sur la sécurité, Crimson offre une expérience de visionnage fluide et agréable grâce à un lecteur vidéo propre et une interface moderne.
 
-![Banner Crimson](img/assets/og-image.png)
-
 ## 🎬 Fonctionnalités principales
 
 - **Catalogue mis à jour en continu**  
