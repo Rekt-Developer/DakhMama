@@ -18,7 +18,7 @@
   - **Qualité vidéo optimisée** : Nous offrons la meilleure qualité possible pour chaque contenu, adaptée à votre connexion pour un streaming sans ralentissement.
 
 - **Programmes en direct 24h/24**  
-  En plus de notre bibliothèque de films et séries, nous diffusons des programmes en direct accessibles à tout moment. Qu’il s’agisse de films, de documentaires, ou d'autres types de programmes, notre flux direct propose du contenu varié en continu.
+  En plus de notre bibliothèque de films , nous diffusons des programmes en direct accessibles à tout moment. Qu’il s’agisse de films, de documentaires, TNT  ou d'autres types de programmes, notre flux direct propose du contenu varié en continu.
 
 ## 🛠 Technologies et Architecture
 
