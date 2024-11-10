@@ -54,6 +54,7 @@ Nous travaillons en permanence pour ajouter de nouvelles fonctionnalités et am�
 
 Crimson est sur le point de se lancer, et nous recherchons des personnes motivées prêtes à contribuer bénévolement pour faire de cette plateforme de streaming un véritable succès ! Que vous soyez développeur ou non-développeur, si vous avez des compétences en développement web, en gestion de contenu, ou dans d'autres domaines pertinents, votre expertise est la bienvenue.
 
-Comment postuler ?
+- **Comment postuler ?**
+
 Vous pouvez retrouver notre Formulaire de Recrutement directement depuis la page d'accueil de notre site ou en suivant ce lien : [Formulaire de Recrutement Crimson](https://docs.google.com/forms/d/e/1FAIpQLSc41C1T8fawbCqw7hvYfsxdkGMLVTWwZKefqxuTHqxRVDRr_w/viewform?usp=sf_link) Indiquez-y vos compétences et motivations, et nous vous contacterons si une opportunité de collaboration bénévole correspond à votre profil.
 
