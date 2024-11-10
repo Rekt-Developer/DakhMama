@@ -1,0 +1,16 @@
+# Fichiers système et temporaires
+.DS_Store
+Thumbs.db
+
+# Configurations spécifiques à votre éditeur et environnements de développement
+.vscode/
+.idea/
+
+# Dossiers de modules et de compilation
+node_modules/
+dist/
+cache/
+
+# Ignorer tous les fichiers `.m3u`, sauf `playlist.m3u` si nécessaire
+*.m3u
+!playlist.m3u
