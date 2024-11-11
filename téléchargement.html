@@ -118,7 +118,7 @@
                                     <div id="menu" class="collapse header-menu">
                                         <ul class="nav vfx-item-nav">
                                             <li><a href="index.html" title="home">Home</a></li>
-                                            <li><a href="#" class="Active" title="Films">Films</a></li>
+                                            <li><a href="films.html" class="Active" title="Films">Films</a></li>
                                             <li><a href="direct.html" title="En direct">En direct</a></li>
                                         </ul>
                                     </div>
@@ -226,6 +226,70 @@
                 });
         }
     </script>
+    <div id="popup1" class="popup-view popup-overlay">
+        <div class="search">
+          <div class="search-container has-results"><span class="title">Rechercher</span>
+            <div class="search-input">
+              <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off">
+            </div>
+          </div>
+          <div class="search-results mt-4" id="search_output">
+              
+       
+          </div>
+        </div>
+        <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
+      </div>     
+    <div class="eupopup eupopup-bottom"></div>
+    <script>
+    async function showSuggestions(query) {
+        const searchOutput = document.getElementById('search_output');
+        searchOutput.innerHTML = ''; // Réinitialiser les résultats
+    
+        if (!query) return; // Si la requête est vide, ne rien faire
+    
+        const response = await fetch('search/f.json');
+        const movies = await response.json();
+    
+        const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
+    
+        if (filteredMovies.length > 0) {
+            filteredMovies.forEach(movie => {
+                const movieDiv = document.createElement('div');
+                movieDiv.classList.add('single-video');
+                movieDiv.innerHTML = `
+                    <a href="${movie.emplacement}">
+                        <div class="video-img">
+                            <span class="video-item-content">${movie.nom}</span>
+                            <img src="${movie.affiche}" alt="${movie.nom}">
+                        </div>
+                    </a>
+                `;
+                searchOutput.appendChild(movieDiv);
+            });
+        } else {
+            searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+        }
+    }
+    </script> 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/megamenu.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/custom-main.js"></script>
+    <script src="js/jquery-eu-cookie-law-popup.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script>
+        // Fonction exécutée lors de l'utilisation du clic droit.
+        $(document).bind("contextmenu", function() {
+            // On indique au navigateur de ne pas réagir en cas de clic droit.
+            return false;
+        });
+        </script>
 
 </body>
 
