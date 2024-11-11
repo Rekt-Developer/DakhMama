@@ -48,6 +48,7 @@ Nous travaillons en permanence pour ajouter de nouvelles fonctionnalités et am�
 
 - **Suggestions personnalisées** basées sur les préférences de visionnage.
 - **Nouveaux canaux en direct** avec du contenu exclusif et une programmation variée.
+- **Téléchargement de films** Bientôt, vous pourrez télécharger vos films préférés pour les regarder partout, même sans connexion Internet.
 - **Ajout de séries** Bientôt, Crimson proposera également une large sélection de séries en plus des films, avec des options pour suivre les saisons et épisodes facilement.
 
 ## 🚀 Rejoignez l'équipe Crimson
