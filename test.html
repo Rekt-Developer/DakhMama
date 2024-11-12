@@ -1,0 +1,87 @@
+
+   
+    
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur Vidéo Simple</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .video-container {
+            max-width: 800px;
+            width: 100%;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .controls {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .controls button {
+            background: #444;
+            border: none;
+            color: white;
+            padding: 10px;
+            margin-right: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background: #666;
+        }
+        .progress {
+            flex: 1;
+            appearance: none;
+            height: 5px;
+            background: #666;
+            margin-left: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="video" src=" https://box-1011-u.vmeas.cloud/xqx2ofdthnokjiqbte4shmadvfpa5wzjgjbvpo56dxwd44kpjwisc4tbg4nq/ywxji1wqrtqo.mp4"></video>
+        <div class="controls">
+            <button onclick="togglePlayPause()">Lecture / Pause</button>
+            <input type="range" id="progress" class="progress" value="0" min="0" max="100">
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const progress = document.getElementById('progress');
+
+        function togglePlayPause() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        video.addEventListener('timeupdate', () => {
+            const percent = (video.currentTime / video.duration) * 100;
+            progress.value = percent;
+        });
+
+        progress.addEventListener('input', () => {
+            const time = (progress.value * video.duration) / 100;
+            video.currentTime = time;
+        });
+    </script>
+</body>
+</html>
