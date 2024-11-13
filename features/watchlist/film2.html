@@ -172,11 +172,13 @@
                     <span class="video-imdb-view">5.3/10 ⭐</span>
                   </div>
                   <div id="movie-button-important-margin" class="video-watch-share-item" style="margin-top: 160px;">
-                    <span id="1111">
-                        <a href="javascript:void(0)" onclick="addToWatchlist(904, '3 jours max', 'img/film/3-jours-max/3-jours-max-affiche.jpg')" title="watchlist">
-                          <i class="fa fa-plus"></i>‎ Ajouter à ma liste
-                        </a>
-                      </span>
+                   <!-- Exemple de bouton pour ajouter un film à la watchlist -->
+<span id="1111">
+  <a href="javascript:void(0)" onclick="addToWatchlist(904, '3 jKKKours max', 'img/film/30-jours-max/30-jours-max-affiche.jpg')" title="watchlist">
+      <i class="fa fa-plus"></i>‎ Ajouter à ma liste
+  </a>
+</span>
+
                       
                       
                 </div>
@@ -324,46 +326,48 @@
 </div>     
 
 <div class="eupopup eupopup-bottom"></div>
+
 <script>
 async function showSuggestions(query) {
-  const searchOutput = document.getElementById('search_output');
-  searchOutput.innerHTML = ''; // Réinitialiser les résultats
+    const searchOutput = document.getElementById('search_output');
+    searchOutput.innerHTML = ''; // Réinitialiser les résultats
 
-  if (!query) return; // Si la requête est vide, ne rien faire
+    if (!query) return; // Si la requête est vide, ne rien faire
 
-  const response = await fetch('../search/d.json');
-  const movies = await response.json();
+    const response = await fetch('search/f.json');
+    const movies = await response.json();
 
-  const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
+    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
 
-  if (filteredMovies.length > 0) {
-      filteredMovies.forEach(movie => {
-          const movieDiv = document.createElement('div');
-          movieDiv.classList.add('single-video');
-          movieDiv.innerHTML = `
-              <a href="${movie.emplacement}">
-                  <div class="video-img">
-                      <span class="video-item-content">${movie.nom}</span>
-                      <img src="${movie.affiche}" alt="${movie.nom}">
-                  </div>
-              </a>
-          `;
-          searchOutput.appendChild(movieDiv);
-      });
-  } else {
-      searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
-  }
+    if (filteredMovies.length > 0) {
+        filteredMovies.forEach(movie => {
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('single-video');
+            movieDiv.innerHTML = `
+                <a href="${movie.emplacement}">
+                    <div class="video-img">
+                        <span class="video-item-content">${movie.nom}</span>
+                        <img src="${movie.affiche}" alt="${movie.nom}">
+                    </div>
+                </a>
+            `;
+            searchOutput.appendChild(movieDiv);
+        });
+    } else {
+        searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+    }
 }
-</script>  
+</script> 
 <script>
- function addToWatchlist(postId, title, imageUrl) {
+  
+// Fonction pour ajouter un film à la watchlist
+function addToWatchlist(postId, title, imageUrl) {
   try {
-    // Récupérer la liste actuelle du localStorage
+    // Récupérer la liste actuelle du localStorage, ou un tableau vide si aucune donnée
     let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
-    
+
     // Vérifier si le film est déjà dans la liste
     if (!watchlist.some(item => item.id === postId)) {
-      // Ajouter le film à la watchlist
       watchlist.push({
         id: postId,
         title: title,
@@ -373,22 +377,94 @@ async function showSuggestions(query) {
 
       // Enregistrer la nouvelle liste dans le localStorage
       localStorage.setItem('watchlist', JSON.stringify(watchlist));
-    } 
-    
-    // Rediriger vers list.html sans notification
-    window.location.href = 'list.html';
+    }
+
+    // Mettre à jour l'affichage de la liste sur la même page
+    updateWatchlistDisplay();
   } catch (error) {
     console.error("Erreur lors de l'ajout à la liste :", error);
     alert("Une erreur est survenue. Veuillez réessayer.");
   }
 }
-  </script>
-<script>
-$(document).ready(function() {
-    $(document).bind("contextmenu", function() {
-        return false;
+
+// Fonction pour mettre à jour l'affichage de la watchlist
+function updateWatchlistDisplay() {
+  const container = document.getElementById('watchlist-container');
+  container.innerHTML = ''; // Réinitialiser le contenu
+
+  const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+  if (watchlist.length === 0) {
+    container.innerHTML = '<p>Votre liste est vide.</p>';
+  } else {
+    // Démarrer le carrousel
+    let carouselContent = '<div class="video-carousel owl-carousel">';
+
+    watchlist.forEach(film => {
+      carouselContent += `
+        <div class="single-video">
+          <div class="watchlist-item">
+            <a href="javascript:void(0);" onclick="removeFromWatchlist(${film.id})" title="Retirer">
+              <i class="fa fa-times"></i> Retirer
+            </a>
+          </div>
+          <a href="${film.link}" title="${film.title}">
+            <div class="video-img">
+              <span class="video-item-content">${film.title}</span>
+              <img src="${film.imageUrl}" alt="${film.title}" title="${film.title}">
+            </div>
+          </a>
+        </div>`;
     });
-});
-</script> <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
+
+    // Terminer le carrousel
+    carouselContent += '</div>';
+
+    container.innerHTML = carouselContent; // Insérer le carrousel dans le conteneur
+  }
+}
+
+// Fonction pour retirer un film de la watchlist
+function removeFromWatchlist(postId) {
+  try {
+    // Récupérer la liste actuelle du localStorage
+    let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+
+    // Filtrer le film à retirer
+    watchlist = watchlist.filter(item => item.id !== postId);
+
+    // Enregistrer la nouvelle liste dans le localStorage
+    localStorage.setItem('watchlist', JSON.stringify(watchlist));
+
+    // Mettre à jour l'affichage après suppression
+    updateWatchlistDisplay();
+  } catch (error) {
+    console.error("Erreur lors de la suppression du film :", error);
+  }
+}
+
+// Appeler updateWatchlistDisplay dès que la page est chargée pour afficher la liste
+window.onload = updateWatchlistDisplay;
+</script>
+</script>
+<!-- Load Local JS -->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/megamenu.js"></script>
+<script src="js/splide.min.js"></script>
+<script src="js/custom-main.js"></script>
+<script src="js/jquery-eu-cookie-law-popup.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<script>
+	// Fonction exécutée lors de l'utilisation du clic droit.
+	$(document).bind("contextmenu", function() {
+		// On indique au navigateur de ne pas réagir en cas de clic droit.
+		return false;
+	});
+</script>
 </body>
 </html>

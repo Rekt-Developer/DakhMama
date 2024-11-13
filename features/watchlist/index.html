@@ -256,7 +256,22 @@
 <!-- End Slider Area -->
 <!-- Banner -->
 <!-- Start Upcoming Section -->
-
+<!-- End Upcoming Section -->
+<!-- Start Movies Video Carousel -->
+<div class="vfx-item-ptb vfx-item-info">
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-md-12">
+		  <div class="vfx-item-section">
+			<h3>MA LISTE</h3>
+		  </div>
+		  <div class="video-carousel owl-carousel" id="watchlist-container">
+			<!-- Les films seront ajoutés ici dynamiquement par JavaScript -->
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
   
   
 <div class="video-carousel-area vfx-item-ptb">
@@ -731,7 +746,104 @@ async function showSuggestions(query) {
     }
 }
 </script> 
+<script>
+ 
+    // Fonction pour ajouter un film à la watchlist
+    function addToWatchlist(postId, title, imageUrl) {
+      try {
+        // Récupérer la liste actuelle du localStorage, ou un tableau vide si aucune donnée
+        let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 
+        // Vérifier si le film est déjà dans la liste
+        if (!watchlist.some(item => item.id === postId)) {
+          watchlist.push({
+            id: postId,
+            title: title,
+            imageUrl: imageUrl,
+            link: `https://crimson-streaming.github.io/crimson/film/${title.toLowerCase().replace(/\s+/g, '-')}`
+          });
+
+          // Enregistrer la nouvelle liste dans le localStorage
+          localStorage.setItem('watchlist', JSON.stringify(watchlist));
+        }
+
+        // Mettre à jour l'affichage de la liste sur la même page
+        updateWatchlistDisplay();
+      } catch (error) {
+        console.error("Erreur lors de l'ajout à la liste :", error);
+        alert("Une erreur est survenue. Veuillez réessayer.");
+      }
+    }
+
+    // Fonction pour mettre à jour l'affichage de la watchlist
+    function updateWatchlistDisplay() {
+      const container = document.getElementById('watchlist-container');
+      container.innerHTML = ''; // Réinitialiser le contenu
+
+      const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+      if (watchlist.length === 0) {
+        container.innerHTML = '<p>Votre liste est vide.</p>';
+      } else {
+        // Démarrer le carrousel
+        let carouselContent = '<div class="video-carousel owl-carousel">';
+
+        watchlist.forEach(film => {
+          carouselContent += `
+            <div class="single-video">
+              <div class="watchlist-item">
+                <a href="javascript:void(0);" onclick="removeFromWatchlist(${film.id})" title="Retirer">
+                  <i class="fa fa-times"></i> Retirer
+                </a>
+              </div>
+              <a href="${film.link}" title="${film.title}">
+                <div class="video-img">
+                  <span class="video-item-content">${film.title}</span>
+                  <img src="${film.imageUrl}" alt="${film.title}" title="${film.title}">
+                </div>
+              </a>
+            </div>`;
+        });
+
+        // Terminer le carrousel
+        carouselContent += '</div>';
+
+        container.innerHTML = carouselContent; // Insérer le carrousel dans le conteneur
+      }
+
+      // Initialiser Owl Carousel
+      $(".video-carousel").owlCarousel({
+        items: 4, // Nombre d'éléments à afficher
+        autoplay: true,
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false
+      });
+    }
+
+    // Fonction pour retirer un film de la watchlist
+    function removeFromWatchlist(postId) {
+      try {
+        // Récupérer la liste actuelle du localStorage
+        let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+
+        // Filtrer le film à retirer
+        watchlist = watchlist.filter(item => item.id !== postId);
+
+        // Enregistrer la nouvelle liste dans le localStorage
+        localStorage.setItem('watchlist', JSON.stringify(watchlist));
+
+        // Mettre à jour l'affichage après suppression
+        updateWatchlistDisplay();
+      } catch (error) {
+        console.error("Erreur lors de la suppression du film :", error);
+      }
+    }
+
+    // Appeler updateWatchlistDisplay dès que la page est chargée pour afficher la liste
+    window.onload = updateWatchlistDisplay;
+  </script>
+ 
 <!-- Load Local JS -->
 
 <script src="js/jquery-3.3.1.min.js"></script>
