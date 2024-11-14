@@ -732,9 +732,39 @@ async function showSuggestions(query) {
     }
 }
 </script> 
-
-
-
+<script>
+	// Fonction pour détecter si on est en mode PWA
+	function isPWA() {
+	  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+	}
+  
+	// Si on est en mode PWA, on ignore le script megamenu.js
+	if (!isPWA()) {
+	  var script = document.createElement("script");
+	  script.src = "js/megamenu.js";
+	  document.head.appendChild(script);
+	}
+  </script>
+  <script> 
+	document.addEventListener('keydown', function(event) {
+		// Ctrl + U
+		if (event.ctrlKey && event.key === 'u') {
+			event.preventDefault();
+		}
+	
+		// Ctrl + Maj + C
+		if (event.ctrlKey && event.shiftKey && event.key === 'C') {
+			event.preventDefault();
+		}
+	
+		// Ctrl + Maj + I
+		if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+			event.preventDefault();
+		}
+	});
+	
+	</script>  
+  
 <!-- Load Local JS -->
 
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -742,7 +772,7 @@ async function showSuggestions(query) {
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nice-select.min.js"></script>
-
+<script src="js/megamenu.js"></script>
 <script src="js/splide.min.js"></script>
 <script src="js/custom-main.js"></script>
 <script src="js/jquery-eu-cookie-law-popup.js"></script>
