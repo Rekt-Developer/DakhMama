@@ -553,19 +553,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         </script>  
-        <script>
-            // Fonction pour détecter si on est en mode PWA
-            function isPWA() {
-              return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-            }
-          
-            // Si on est en mode PWA, on ignore le script megamenu.js
-            if (!isPWA()) {
-              var script = document.createElement("script");
-              script.src = "js/megamenu.js";
-              document.head.appendChild(script);
-            }
-          </script>
+  
 
    <!-- JS Imports -->
    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

@@ -403,19 +403,7 @@ document.addEventListener('keydown', function(event) {
 });
 
 </script> 
-<script>
-	// Fonction pour détecter si on est en mode PWA
-	function isPWA() {
-	  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-	}
-  
-	// Si on est en mode PWA, on ignore le script megamenu.js
-	if (!isPWA()) {
-	  var script = document.createElement("script");
-	  script.src = "../js/megamenu.js";
-	  document.head.appendChild(script);
-	}
-  </script>
+
 <script>
 $(document).ready(function() {
     $(document).bind("contextmenu", function() {
