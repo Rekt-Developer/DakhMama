@@ -410,10 +410,14 @@
 </script>
 
 
+
       </div>
     </div>
   </div>
 </div>
+<div class="scroll-top">
+  <div class="scroll-icon"> <i class="fa fa-angle-up"></i> </div>
+  </div>
 <div id="popup1" class="popup-view popup-overlay">
   <div class="search">
     <div class="search-container has-results"><span class="title">Rechercher</span>
@@ -462,24 +466,24 @@ async function showSuggestions(query) {
 }
 </script></script> 
 <script> 
-document.addEventListener('keydown', function(event) {
-    // Ctrl + U
-    if (event.ctrlKey && event.key === 'u') {
-        event.preventDefault();
-    }
-
-    // Ctrl + Maj + C
-    if (event.ctrlKey && event.shiftKey && event.key === 'C') {
-        event.preventDefault();
-    }
-
-    // Ctrl + Maj + I
-    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-        event.preventDefault();
-    }
-});
-
-</script> 
+  document.addEventListener('keydown', function(event) {
+      // Ctrl + U
+      if (event.ctrlKey && event.key === 'u') {
+          event.preventDefault();
+      }
+  
+      // Ctrl + Maj + C
+      if (event.ctrlKey && event.shiftKey && event.key === 'C') {
+          event.preventDefault();
+      }
+  
+      // Ctrl + Maj + I
+      if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+          event.preventDefault();
+      }
+  });
+  
+  </script> 
 
 
 
@@ -502,7 +506,7 @@ document.addEventListener('keydown', function(event) {
     });</script>
 
  <!-- disable devtool -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/devtools-detector/2.0.14/devtools-detector.js" integrity="sha512-ZiYgUI2NVB760mprMoZ2WTZ/KslDohbAm6QsGBmqpWDsVkJ2V7gEIAaQHj3/EutqpQWeryBiGHjg3JyWQ4EewQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
  
 </body>
 </html>
