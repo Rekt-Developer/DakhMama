@@ -156,6 +156,15 @@
 	}
 
 
+/* iOS Safe Area Support */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+}
+
+
+
 	</style>
 </head>
 <!-- Start Header -->
