@@ -40,7 +40,7 @@ Chez Crimson, la sécurité et la confidentialité de nos utilisateurs sont une 
 
 ## 🚀 Installation
 
-Crimson est conçu pour être accessible via un navigateur Web, avec une interface adaptée pour une utilisation sur ordinateurs, mobiles et tablettes. 
+Crimson est accessible via https://crimson-streaming.github.io/crimson , avec une interface adaptée pour une utilisation sur ordinateurs, mobiles et tablettes.
 
 ## 📈 Améliorations futures
 
