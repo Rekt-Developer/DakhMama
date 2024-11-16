@@ -2,309 +2,799 @@
     {
         "nom": "Nowhere",
         "affiche": "../img/film/Nowhere/Nowhere-affiche.jpg",
-        "emplacement": "../film/nowhere.html"
+        "emplacement": "../film/nowhere.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Drame",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "Deadpool & Wolverine",
         "affiche": "../img/film/deadpool-et-wolverine/deadpool-et-wolverine-affiche.webp",
-        "emplacement": "../film/Deadpool-et-Wolverine.html"
+        "emplacement": "../film/Deadpool-et-Wolverine.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Comédie",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Athena",
         "affiche": "../img/film/Athena/Athena-affiche.jpg",
-        "emplacement": "../film/athena.html"
+        "emplacement": "../film/athena.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Drame",
+            "Thriller"
+        ]
     },
     {
         "nom": "3 jours max",
         "affiche": "../img/film/3-jours-max/3-jours-max-affiche.jpg",
-        "emplacement": "../film/3-jours-max.html"
+        "emplacement": "../film/3-jours-max.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "30 jours max",
         "affiche": "../img/film/30-jours-max/30-jours-max-affiche.jpg",
-        "emplacement": "../film/30-jours-max.html"
+        "emplacement": "../film/30-jours-max.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "Alibi.com 2",
         "affiche": "../img/film/Alibi.com-2/Alibi.com-2-affiche.jpg",
-        "emplacement": "../film/alibi.com-2.html"
+        "emplacement": "../film/alibi.com-2.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "American Nightmare 5 : Sans Limites",
         "affiche": "../img/film/American-Nightmare-5-Sans-Limites/American-Nightmare-5-Sans-Limites-affiche.jpg",
-        "emplacement": "../film/american-nightmare-5-sans-limites.html"
+        "emplacement": "../film/american-nightmare-5-sans-limites.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Horreur",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "BAC Nord",
         "affiche": "../img/film/BAC-Nord/BAC-Nord-affiche.jpg",
-        "emplacement": "../film/Alibi.com-2.html"
+        "emplacement": "../film/Alibi.com-2.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "Back to Black",
         "affiche": "../img/film/back-to-black/Back-to-Black-affiche.jpg",
-        "emplacement": "../film/back-to-black.html"
+        "emplacement": "../film/back-to-black.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Biographique",
+            "Drame"
+           
+        ]
     },
     {
         "nom": "Barbare",
         "affiche": "../img/film/Barbare/Barbare-affiche.jpg",
-        "emplacement": "../film/barbare.html"
+        "emplacement": "../film/barbare.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Mystère",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "Dune Deuxième partie",
         "affiche": "../img/film/dune-deuxieme-partie/dune-deuxieme-partie-affiche.webp",
-        "emplacement": "../film/dune-deuxième-partie.html"
+        "emplacement": "../film/dune-deuxième-partie.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Furiosa Une saga Mad Max",
         "affiche": "../img/film/Furiosa-Une-saga-Mad-Max/Furiosa-Une-saga-Mad-Max-affiche.webp",
-        "emplacement": "../film/furiosa-une-saga-Mad-Max.html"
+        "emplacement": "../film/furiosa-une-saga-Mad-Max.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Godzilla x Kong Le Nouvel Empire",
         "affiche": "../img/film/Godzilla-x-Kong-Le-Nouvel-Empire/Godzilla-x-Kong-Le-Nouvel-Empire-affiche.jpg",
-        "emplacement": "../film/godzilla-x-kong-le-nouvel-empire.html"
+        "emplacement": "../film/godzilla-x-kong-le-nouvel-empire.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Godzilla Minus One",
         "affiche": "../img/film/godzilla-minus-one/godzilla-minus-one-affiche.jpg",
-        "emplacement": "../film/godzilla-minus-one.html"
-        
+        "emplacement": "../film/godzilla-minus-one.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Horreur",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Godzilla vs. Kong",
         "affiche": "../img/film/godzilla-vs-kong/godzilla-vs-kong-affiche.jpg",
-        "emplacement": "../film/godzilla-vs-kong.html"
+        "emplacement": "../film/godzilla-vs-kong.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Gran Turismo",
         "affiche": "../img/film/Gran-Turismo/Gran-Turismo-affiche.jpg",
-        "emplacement": "../film/gran-turismo.html"
+        "emplacement": "../film/gran-turismo.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Drame"
+           
+        ]
     },
     {
         "nom": "Insidious The Red Door",
         "affiche": "../img/film/Insidious-The-Red-Door/Insidious-The-Red-Door-affiche.jpg",
-        "emplacement": "../film/insidious-the-red-door.html"
+        "emplacement": "../film/insidious-the-red-door.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "Iron Claw",
         "affiche": "../img/film/Iron-Claw/Iron-Claw-affiche.jpg",
-        "emplacement": "../film/iron-claw.html"
+        "emplacement": "../film/iron-claw.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Biographique",
+            "Drame"
+           
+        ]
     },
     {
         "nom": "Joker",
         "affiche": "../img/film/Joker/Joker-affiche.jpg",
-        "emplacement": "../film/joker.html"
+        "emplacement": "../film/joker.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Drame",
+            "Horreur",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "Dune : Première partie",
         "affiche": "../img/film/dune-première-partie/dune-première-partie-affiche.jpg",
-        "emplacement": "../film/dune-première-partie.html"
+        "emplacement": "../film/dune-première-partie.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Planet Dune",
         "affiche": "../img/film/planet-dune/planet-dune-affiche.jpg",
-        "emplacement": "../film/planet-dune.html"
+        "emplacement": "../film/planet-dune.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Jake Paul vs. Mike Tyson",
         "affiche": "../img/film/jake-paul-vs-mik-tyson/jake-paul-vs-mik-tyson-affiche.png",
-        "emplacement": "../film/jake-paul-vs-mike-tyson.html"
+        "emplacement": "../film/jake-paul-vs-mike-tyson.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Spectacle",
+            "Netflix",
+            "Anglais"
+        ]
     },
     {
         "nom": "Maison de retraite ",
         "affiche": "../img/film/maison-de-retraite/maison-de-retraite-affiche.jpg",
-        "emplacement": "../film/maison-de-retraite.html"
+        "emplacement": "../film/maison-de-retraite.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "Jurassic World Le Monde d’après",
         "affiche": "../img/film/Jurassic-World-Le-Monde-d’après/Jurassic-World-Le-Monde-d’après-affiche.jpg",
-        "emplacement": "../film/jurassic-world-le-monde-d’après.html"
+        "emplacement": "../film/jurassic-world-le-monde-d’après.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Jurassic World : Fallen Kingdom",
         "affiche": "../img/film/jurassic-world-fallen-kingdom/jurassic-world-fallen-kingdom-affiche.jpg",
-        "emplacement": "../film/jurassic-world-fallen-kingdom.html"
+        "emplacement": "../film/jurassic-world-fallen-kingdom.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "Jurassic World",
         "affiche": "../img/film/jurassic-world/jurassic-world-affiche.jpg",
-        "emplacement": "../film/jurassic-world.html"
+        "emplacement": "../film/jurassic-world.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "La Nonne La Malédiction de Sainte-Lucie",
         "affiche": "../img/film/La-Nonne-La-Malédiction-de-Sainte-Lucie/La-Nonne-La-Malédiction-de-Sainte-Lucie-affiche.jpg",
-        "emplacement": "../film/la-nonne-la-malédiction-de-sainte-lucie.html"
+        "emplacement": "../film/la-nonne-la-malédiction-de-sainte-lucie.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur"
+           
+        ]
     },
     {
         "nom": "La Nonne",
         "affiche": "../img/film/la-nonne/la-nonne-affiche.jpg",
-        "emplacement": "../film/la-nonne.html"
+        "emplacement": "../film/la-nonne.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur"
+           
+        ]
     },
     {
         "nom": "La Planète des Singes Le Nouveau Royaume",
         "affiche": "../img/film/la-planet-des-singes/la-planet-des-singes-affiche.webp",
-        "emplacement": "../film/la-planète-des-singes-le-nouveau-royaume.html"
+        "emplacement": "../film/la-planète-des-singes-le-nouveau-royaume.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Le Cercle des neiges",
         "affiche": "../img/film/Le-Cercle-des-neiges/Le-Cercle-des-neiges-affiche.jpg",
-        "emplacement": "../film/le-cercle-des-neiges.html"
+        "emplacement": "../film/le-cercle-des-neiges.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Biographique",
+            "Drame"
+           
+        ]
     },
     {
         "nom": "Les SEGPA au ski",
         "affiche": "../img/film/Les-SEGPA-au-ski/Les-SEGPA-au-ski-affiche.jpg",
-        "emplacement": "../film/les-segpa-au-ski.html"
+        "emplacement": "../film/les-segpa-au-ski.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "Les SEGPA",
         "affiche": "../img/film/les-segpa/les-segpa-affiche.jpg",
-        "emplacement": "../film/les-segpa.html"
+        "emplacement": "../film/les-segpa.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "Les Tuche 4",
         "affiche": "../img/film/Les-Tuche-4/Les-Tuche-4-affiche.jpg",
-        "emplacement": "../film/les-tuche-4.html"
+        "emplacement": "../film/les-tuche-4.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "Madame Web",
         "affiche": "../img/film/Madame-Web/Madame-Web-affiche.jpg",
-        "emplacement": "../film/madame-web.html"
+        "emplacement": "../film/madame-web.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Fantastique"
+           
+        ]
     },
     {
         "nom": "Maison de retraite 2",
         "affiche": "../img/film/Maison-de-retraite-2/Maison-de-retraite-2-affiche.jpg",
-        "emplacement": "../film/maison-de-retraite-2.html"
+        "emplacement": "../film/maison-de-retraite-2.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "Mayday",
         "affiche": "../img/film/Mayday/Mayday-affiche.jpg",
-        "emplacement": "../film/mayday.html"
+        "emplacement": "../film/mayday.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action"
+           
+        ]
     },
     {
         "nom": "Moi moche et méchant 4",
         "affiche": "../img/film/moi-moche-et-mechant-4/moi-moche-et-mechant-affiche.webp",
-        "emplacement": "../film/moi-moche-et-méchant-4.html"
+        "emplacement": "../film/moi-moche-et-méchant-4.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Animation",
+            "Familial"
+           
+        ]
     },
     {
         "nom": "Napoléon",
         "affiche": "../img/film/Napoléon/napoleon-affiche.webp",
-        "emplacement": "../film/napoléon.html"
+        "emplacement": "../film/napoléon.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Biographique",
+            "Guerre",
+            "Romance"
+           
+        ]
     },
     {
         "nom": "Napoléon - Version Longue",
         "affiche": "../img/film/Napoléon/napoleon-affiche.webp",
-        "emplacement": "../film/napoléon-version-longue.html"
-        
+        "emplacement": "../film/napoléon-version-longue.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Biographique",
+            "Guerre",
+            "Romance"
+           
+        ]
     },
     {
         "nom": "Oppenheimer",
         "affiche": "../img/film/Oppenheimer/Oppenheimer-affiche.jpg",
-        "emplacement": "../film/oppenheimer.html"
+        "emplacement": "../film/oppenheimer.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Biographique",
+            "Drame"
+           
+        ]
     },
     {
         "nom": "Scream VI",
         "affiche": "../img/film/Scream-VI/Scream-VI-affiche.jpg",
-        "emplacement": "../film/Scream-vi.html"
+        "emplacement": "../film/Scream-vi.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "Scream 5",
         "affiche": "../img/film/scream-5/scream-5-affiche.jpg",
-        "emplacement": "../film/scream-5.html"
-        
+        "emplacement": "../film/scream-5.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Thriller",
+            "Mystère"
+           
+        ]
     },
     {
         "nom": "Scream 4",
         "affiche": "../img/film/scream-4/scream-4-affiche.jpg",
-        "emplacement": "../film/scream-4.html"
-        
+        "emplacement": "../film/scream-4.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Mystère"
+           
+        ]
     },
     {
         "nom": "Scream 3",
         "affiche": "../img/film/scream-3/scream-3-affiche.jpg",
-        "emplacement": "../film/scream-3.html"
-        
+        "emplacement": "../film/scream-3.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Mystère"
+           
+        ]
     },
     {
         "nom": "Scream 2",
         "affiche": "../img/film/scream-2/scream-2-affiche.jpg",
-        "emplacement": "../film/scream-2.html"
-        
+        "emplacement": "../film/scream-2.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Mystère"
+           
+        ]
     },
     {
         "nom": "Scream",
         "affiche": "../img/film/scream/scream-affiche.jpg",
-        "emplacement": "../film/scream.html"
-        
+        "emplacement": "../film/scream.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Mystère"
+           
+        ]
     },
     {
         "nom": "Le Comte de Monte-Cristo",
         "affiche": "../img/film/le-comte-de-montecristo/le-comte-de-montecristo-affiche.jpg",
-        "emplacement": "../film/le-comte-de-montecristo.html"
+        "emplacement": "../film/le-comte-de-montecristo.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Biographique",
+            "Drame",
+            "Romance",
+            "Romance"
+           
+        ]
     },
     {
         "nom": "Joker : Folie à deux",
         "affiche": "../img/film/joker-folie-à-deux/joker-folie-à-deux-affiche.jpg",
-        "emplacement": "../film/joker-folie-à-deux.html"
+        "emplacement": "../film/joker-folie-à-deux.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Crime",
+            "Drame",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "Sous la Seine",
         "affiche": "../img/film/sous-la-seine/sous-la-seine-affiche.webp",
-        "emplacement": "../film/sous-la-seine.html"
+        "emplacement": "../film/sous-la-seine.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Horreur",
+            "Mystère",
+            "Thriller"
+        ]
     },
     {
         "nom": "Smile",
         "affiche": "../img/film/Smile/Smile-affiche.jpg",
-        "emplacement": "../film/smile.html"
+        "emplacement": "../film/smile.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Mystère",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "Spider Man : No Way Home",
         "affiche": "../img/film/Spider-Man-No-Way-Home/Spider-Man-No-Way-Home-affiche.jpg",
-        "emplacement": "../film/spider-man-no-way-home.html"
+        "emplacement": "../film/spider-man-no-way-home.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Terrifier 2",
         "affiche": "../img/film/Terrifier-2/Terrifier-2-affiche.jpg",
-        "emplacement": "../film/terrifier-2.html"
+        "emplacement": "../film/terrifier-2.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Horreur",
+            "Thriller"
+           
+        ]
     },
     {
         "nom": "The Fall Guy",
         "affiche": "../img/film/The-Fall-Guy/The-Fall-Guy-affiche.jpg",
-        "emplacement": "../film/the-fall-guy.html"
+        "emplacement": "../film/the-fall-guy.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "The Marvels",
         "affiche": "../img/film/The-Marvels/The-Marvels-affiche.jpg",
-        "emplacement": "../film/the-marvels.html"
+        "emplacement": "../film/the-marvels.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Science-fiction"
+           
+        ]
     },
     {
         "nom": "Top Gun Maverick",
         "affiche": "../img/film/Top-Gun-Maverick/Top-Gun-Maverick-affiche.jpg",
-        "emplacement": "../film/top-gun-maverick.html"
+        "emplacement": "../film/top-gun-maverick.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Drame"
+           
+        ]
     },
     {
         "nom": "Top Gun",
         "affiche": "../img/film/top-gun/top-gun-affiche.jpg",
-        "emplacement": "../film/top-gun.html"
+        "emplacement": "../film/top-gun.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure"
+           
+        ]
     },
     {
         "nom": "Twisters",
         "affiche": "../img/film/Twisters/Twisters-affiche.jpg",
-        "emplacement": "../film/twisters.html"
+        "emplacement": "../film/twisters.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Action",
+            "Aventure",
+            "Drame",
+            "Thriller"
+        ]
     },
     {
         "nom": "Un p'tit truc en plus",
         "affiche": "../img/film/un-petit-truc-en-plus/un-petit-truc-en-plus-affiche.webp",
-        "emplacement": "../film/Un-p'tit-truc-en-plus.html"
+        "emplacement": "../film/Un-p'tit-truc-en-plus.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Comédie"
+           
+        ]
     },
     {
         "nom": "Vice versa 2",
         "affiche": "../img/film/vice-versa-2/vice-versa-2-affiche.webp",
-        "emplacement": "../film/vice-versa-2.html"
+        "emplacement": "../film/vice-versa-2.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Animation",
+            "Familial"
+           
+        ]
     },
     {
         "nom": "Your Name.",
         "affiche": "../img/film/your-name/your-name-affiche.jpg",
-        "emplacement": "../film/your-name.html"
-        
+        "emplacement": "../film/your-name.html",
+        "genre": [
+           
+            "Films",
+            "En direct",
+            "Animation",
+            "Romance",
+            "Drame"
+           
+        ]
     }
 ]
