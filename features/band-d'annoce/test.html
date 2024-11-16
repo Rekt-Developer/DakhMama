@@ -273,15 +273,36 @@
        <script src="../js/custom-main.js"></script>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-       <script type="text/javascript">
+ <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', () => {
             const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
             const player = new Plyr('#player', {
                 controls: playerControls,
-                quality: {
-                    default: 720,
-                    options: [720]
-                },
+                    quality: {
+                default: 720,
+                options: [720],
+                forced: true,
+                onChange: null,
+            },
+                qualityBadge: {
+            2160: '4K',
+            1440: 'ULTRA HD',
+            1080: 'FULL HD',
+            720: 'HD',
+            480: 'SD',
+            360: 'SD',
+        },
+        settings: ['captions', 'quality', 'speed'],
+        playsinline: true,
+        keyboard: {
+            focused: true,
+            global: true,
+        },
+        fullscreen: {
+            enabled: true,
+            fallback: true,
+            iosNative: true,
+        },
                 playsinline: true,
                 keyboard: { focused: true, global: true },
                 fullscreen: { enabled: true, fallback: true, iosNative: true },
