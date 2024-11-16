@@ -126,15 +126,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3"> 
-                                <div class="right-sub-item-area">
-                                  <div class="search-item-block">
-                                    <form class="navbar-form navbar-left">
-                                      <a type="submit" href="#popup1" class="btn btn-default open" title="search"><i class="fa fa-search"></i></a>
-                                    </form>
-                                  </div>
-                                </div>      
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -160,53 +152,6 @@
     </div>
 </div>
  
-<div id="popup1" class="popup-view popup-overlay">
-    <div class="search">
-      <div class="search-container has-results"><span class="title">Rechercher</span>
-        <div class="search-input">
-          <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off" ">
-        </div>
-      </div>
-      <div class="search-results mt-4" id="search_output">
-          
-   
-      </div>
-    </div>
-    <a class="close" href="#" title="close"><i class="ion-close-round"></i></a>
-  </div>     
-   
-<div class="eupopup eupopup-bottom"></div>
-<script>
-    async function showSuggestions(query) {
-        const searchOutput = document.getElementById('search_output');
-        searchOutput.innerHTML = ''; // Réinitialiser les résultats
-    
-        if (!query) return; // Si la requête est vide, ne rien faire
-    
-        const response = await fetch('https://crimson-streaming.github.io/crimson/search/f.json');
-        const movies = await response.json();
-    
-        const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
-    
-        if (filteredMovies.length > 0) {
-            filteredMovies.forEach(movie => {
-                const movieDiv = document.createElement('div');
-                movieDiv.classList.add('single-video');
-                movieDiv.innerHTML = `
-                    <a href="${movie.emplacement}">
-                        <div class="video-img">
-                            <span class="video-item-content">${movie.nom}</span>
-                            <img src="${movie.affiche}" alt="${movie.nom}">
-                        </div>
-                    </a>
-                `;
-                searchOutput.appendChild(movieDiv);
-            });
-        } else {
-            searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
-        }
-    }
-    </script> 
     <script> 
         document.addEventListener('keydown', function(event) {
             // Ctrl + U
