@@ -144,24 +144,28 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
-		html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #0d071e; /* Couleur par défaut */
-}
-
+/* Applique un padding pour la safe area (écran avec encoche) */
 body {
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-    background-color: #0d071e; /* Couleur de fond pour tout l'écran */
+  padding-top: env(safe-area-inset-top); /* Cette ligne ajoute de l'espace en haut, au niveau de l'encoche */
+  background-color: #0d071e; /* Applique une couleur de fond à l'ensemble du body */
 }
 
-header, main {
-    background-color: #0d071e; /* Assurez-vous que votre contenu utilise la même couleur */
+/* Ajuste la navbar pour la rendre bien positionnée */
+.navbar {
+  padding-top: calc(env(safe-area-inset-top) + 10px); /* Ajoute un peu de padding supplémentaire si nécessaire */
+  background-color: #0d071e; /* Applique la couleur à la navbar */
 }
+
+/* Pour les éléments de la navbar, vous pouvez ajuster le style comme vous le souhaitez */
+.header-section {
+  background-color: #0d071e; /* Applique la couleur à l'en-tête de la navbar */
+}
+
+.logo img {
+  max-width: 100%; /* Assurez-vous que le logo s'ajuste correctement */
+  height: auto;
+}
+
 
 		</style>
 </head>
@@ -185,7 +189,7 @@ header, main {
 									<ul class="nav vfx-item-nav">
 										<li><a href="index.html" class="" title="home">Home</a></li>
 										<li><a href="films.html" class="Active" title="Films">Films</a></li>
-										<li><a href="direct.html" class="" title="En direct">En direct</a>
+										<li><a href="direct.html" class="" title="En direct">En direct</a></li>
 										<li><a href="pages/recrutement.html" class="" title="Recrutement">Recrutement</a>
 										<ul class="dm-align-2 mega-list"> </ul>
 								</div>
