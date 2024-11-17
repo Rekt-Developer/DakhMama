@@ -150,23 +150,32 @@ body {
   margin-top: env(safe-area-inset-top); /* Décale le contenu sous la safe area (zone de l'encoche) */
 }
 
-/* Spécifique à la safe area en haut de l'écran */
+/* Zone de la safe area */
 .safe-area-top {
-  height: env(safe-area-inset-top); /* Hauteur égale à la safe area (zone de l'encoche) */
-  background-color: #0d071e; /* Applique la couleur de fond */
-  position: fixed;
+  height: env(safe-area-inset-top); /* Hauteur égale à la safe area */
+  background-color: #0d071e; /* Couleur de fond */
+  position: fixed; /* Fixe en haut de l'écran */
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1; /* S'assure que cette couleur ne chevauche pas les éléments comme la navbar */
+  z-index: 0; /* Zone de la safe area reste derrière la navbar */
 }
 
-/* Ajustements pour la classe .main-menu (ou navbar) pour qu'elle reste intacte */
+/* Navbar visible en permanence */
 .main-menu {
-  position: relative; /* Garder la navbar à sa place sans affecter la safe area */
-  z-index: 1; /* Assure que la navbar reste au-dessus de la couleur de la safe area */
+  position: relative; /* Position normale pour la navbar */
+  z-index: 10; /* Assure que la navbar est au-dessus de la couleur de la safe area */
 }
 
+/* Applique un style spécial quand la navbar est fixe */
+.header-section.pin {
+  position: fixed; /* Position fixée */
+  top: 0; /* Fixe la navbar en haut */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 5; /* Navbar toujours au-dessus de la couleur de la safe area */
+}
 
 </style>
 </head>
