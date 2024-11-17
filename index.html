@@ -150,7 +150,7 @@ body {
   margin-top: env(safe-area-inset-top); /* Décale le contenu sous la safe area (zone de l'encoche) */
 }
 
-/* Zone de la safe area */
+/* Zone de la safe area (couleur de fond) */
 .safe-area-top {
   height: env(safe-area-inset-top); /* Hauteur égale à la safe area */
   background-color: #0d071e; /* Couleur de fond */
@@ -158,24 +158,25 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 0; /* Zone de la safe area reste derrière la navbar */
+  z-index: 1; /* Elle est derrière la navbar */
 }
 
-/* Navbar visible en permanence */
-.main-menu {
-  position: relative; /* Position normale pour la navbar */
-  z-index: 10; /* Assure que la navbar est au-dessus de la couleur de la safe area */
+/* Navbar (header) */
+.header-section {
+  position: relative; /* Position normale */
+  z-index: 10; /* Navbar doit être au-dessus de la couleur de la safe area */
 }
 
-/* Applique un style spécial quand la navbar est fixe */
+/* Quand la navbar devient fixe */
 .header-section.pin {
-  position: fixed; /* Position fixée */
-  top: 0; /* Fixe la navbar en haut */
+  position: fixed;
+  top: env(safe-area-inset-top); /* Commence après la safe area */
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 5; /* Navbar toujours au-dessus de la couleur de la safe area */
+  z-index: 2; /* Navbar reste au-dessus de la safe area */
 }
+
 
 </style>
 </head>
@@ -185,7 +186,7 @@ body {
 
 	<!-- Start Navigation Area -->
 <div class="safe-area-top"></div> <!-- Zone pour l'encoche -->
-
+<header class="header-section">
 	<div class="main-menu">
 		<nav class="header-section pin-style">
 			<div class="container-fluid">
