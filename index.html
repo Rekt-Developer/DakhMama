@@ -144,34 +144,39 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
-/* Applique un padding pour la safe area (écran avec encoche) */
+/* Appliquer la couleur à la zone de l'encoche (barre de statut) sur iPhone */
 body {
-  padding-top: env(safe-area-inset-top); /* Cette ligne ajoute de l'espace en haut, au niveau de l'encoche */
-  background-color: #0d071e; /* Applique une couleur de fond à l'ensemble du body */
+  background-color: #0d071e; /* Applique la couleur de fond générale */
+  margin-top: env(safe-area-inset-top); /* Décale le contenu sous la safe area (zone de l'encoche) */
 }
 
-/* Ajuste la navbar pour la rendre bien positionnée */
-.navbar {
-  padding-top: calc(env(safe-area-inset-top) + 10px); /* Ajoute un peu de padding supplémentaire si nécessaire */
-  background-color: #0d071e; /* Applique la couleur à la navbar */
+/* Spécifique à la safe area en haut de l'écran */
+.safe-area-top {
+  height: env(safe-area-inset-top); /* Hauteur égale à la safe area (zone de l'encoche) */
+  background-color: #0d071e; /* Applique la couleur de fond */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1; /* S'assure que cette couleur ne chevauche pas les éléments comme la navbar */
 }
 
-/* Pour les éléments de la navbar, vous pouvez ajuster le style comme vous le souhaitez */
-.header-section {
-  background-color: #0d071e; /* Applique la couleur à l'en-tête de la navbar */
-}
-
-.logo img {
-  max-width: 100%; /* Assurez-vous que le logo s'ajuste correctement */
-  height: auto;
+/* Ajustements pour la classe .main-menu (ou navbar) pour qu'elle reste intacte */
+.main-menu {
+  position: relative; /* Garder la navbar à sa place sans affecter la safe area */
+  z-index: 1; /* Assure que la navbar reste au-dessus de la couleur de la safe area */
 }
 
 
-		</style>
+</style>
 </head>
 <!-- Start Header -->
 <header>
 	<!-- Start Navigation Area -->
+
+	<!-- Start Navigation Area -->
+<div class="safe-area-top"></div> <!-- Zone pour l'encoche -->
+
 	<div class="main-menu">
 		<nav class="header-section pin-style">
 			<div class="container-fluid">
