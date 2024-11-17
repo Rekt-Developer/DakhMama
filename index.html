@@ -144,31 +144,25 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
-		body {
+		html, body {
     margin: 0;
     padding: 0;
-    background-color: #0d071e; /* Remplacez par la couleur de votre choix */
+    height: 100%;
+    background-color: #0d071e; /* Couleur par défaut */
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px; /* Exemple, ajustez selon votre design */
-    background-color: #0d071e; /* Couleur de fond de la barre de navigation */
-    padding-top: env(safe-area-inset-top); /* Gère l'espace en haut */
-    padding-bottom: env(safe-area-inset-bottom); /* Gère l'espace en bas (si nécessaire) */
-    z-index: 999;
+body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    background-color: #0d071e; /* Couleur de fond pour tout l'écran */
 }
 
-.content {
-    padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
-    margin-top: 60px; /* Ajustez selon la hauteur de votre navbar */
+header, main {
+    background-color: #0d071e; /* Assurez-vous que votre contenu utilise la même couleur */
 }
 
-	
-	
 		</style>
 </head>
 <!-- Start Header -->
