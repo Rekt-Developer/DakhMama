@@ -4,7 +4,7 @@
 <head>
 	<meta name="theme-color" content="#b81b0e">
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta name="author" content="Crimson">
 	<title>Crimson - LE site de streaming</title>
 	<meta name="description" content="Avec Crimson, profitez des derniers films et séries en VF HD, gratuitement et sans aucune publicité ! Ce qui ressemble à un rêve devient une réalité grâce à la révolution Crimson !" />
@@ -18,6 +18,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://crimson-streaming.github.io/crimson/img/assets/og-image.png">
     <link rel="image_src" href="https://crimson-streaming.github.io/crimson/img/assets/og-image.png">
+
+	<meta name="apple-mobile-web-app-capable" content="yes"> <!-- Active le mode plein écran -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Gère la barre de statut -->
+    <meta name="theme-color" content="#b81b0e"> <!-- Couleur pour Android -->
+    <link rel="manifest" href="pwa/manifest.json"> <!-- Lien vers le manifeste -->
+    <link rel="apple-touch-icon" href="img/logo-mobile.png"> <!-- Icône pour iOS -->
 
 <!-- Favicon -->
 	<link rel="icon" type="image/png" href="img/favicon/favicon.png">
@@ -138,6 +144,29 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
+		body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d071e; /* Remplacez par la couleur de votre choix */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px; /* Exemple, ajustez selon votre design */
+    background-color: #0d071e; /* Couleur de fond de la barre de navigation */
+    padding-top: env(safe-area-inset-top); /* Gère l'espace en haut */
+    padding-bottom: env(safe-area-inset-bottom); /* Gère l'espace en bas (si nécessaire) */
+    z-index: 999;
+}
+
+.content {
+    padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+    margin-top: 60px; /* Ajustez selon la hauteur de votre navbar */
+}
+
 	
 	
 		</style>
