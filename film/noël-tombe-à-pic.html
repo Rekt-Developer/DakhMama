@@ -121,7 +121,7 @@
           <source src="https://matoc24313.cloudmatoc.com/files/aa/oebd12WhWw1I21qWZv85Bn8sqayCEQ734ig.m3u8" type="application/x-mpegURL">
           Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
         </video>
-     <!-- JS Imports -->
+       <!-- JS Imports -->
                                   <!-- sw emplacement -->
        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
        <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
@@ -137,6 +137,119 @@
        <script src="../js/ww.js"></script>
        <script src="../js/copie.js"></script>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
+    const player = new Plyr('#player', {
+        controls: playerControls,
+            quality: {
+        default: 720,
+        options: [720],
+        forced: true,
+        onChange: null,
+    },
+        qualityBadge: {
+    2160: '4K',
+    1440: 'ULTRA HD',
+    1080: 'FULL HD',
+    720: 'HD',
+    480: 'SD',
+    360: 'SD',
+},
+settings: ['captions', 'quality', 'speed'],
+playsinline: true,
+keyboard: {
+    focused: true,
+    global: true,
+},
+fullscreen: {
+    enabled: true,
+    fallback: true,
+    iosNative: true,
+},
+        playsinline: true,
+        keyboard: { focused: true, global: true },
+        fullscreen: { enabled: true, fallback: true, iosNative: true },
+        disableContextMenu: true,
+        i18n: {
+              restart: 'Recommencer',
+    rewind: 'Revenir de {seektime}s',
+    play: 'Play',
+    pause: 'Pause',
+    fastForward: 'Passer {seektime}s',
+    seek: 'Rechercher',
+    seekLabel: '{currentTime} de {duration}',
+    played: 'Lancé',
+    buffered: 'Buffered',
+    currentTime: 'Temps actuel',
+    duration: 'Durée',
+    volume: 'Volume',
+    mute: 'Silence',
+    unmute: 'Son activé',
+    enableCaptions: 'Activer les sous-titres',
+    disableCaptions: 'Désactiver les sous-titres',
+    download: 'Télécharger',
+    enterFullscreen: 'Plein écran',
+    exitFullscreen: 'Sortir du plein écran',
+    frameTitle: 'Lecteur pour {title}',
+    captions: 'Sous-titres',
+    settings: 'Réglages',
+    pip: 'Picture-In-Picture',
+    menuBack: 'Retour au menu précédent',
+    speed: 'Vitesse',
+    normal: 'Normal',
+    quality: 'Qualité',
+    loop: 'Boucle',
+    start: 'Début',
+    end: 'Fin',
+    all: 'Tous',
+    reset: 'Réinitialiser',
+    disabled: 'Désactivé',
+    enabled: 'Activé',
+    advertisement: 'Publicité',
+        },
+    });
+
+    const videoElement = document.getElementById('player');
+    const hlsSource = videoElement.querySelector('source').src;
+
+    // Utiliser l'URL comme clé unique pour la vidéo
+    const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
+
+    // Charger le temps de lecture
+    const loadVideoTime = () => {
+        const savedTime = localStorage.getItem(storageKey);
+        if (savedTime) {
+            videoElement.currentTime = parseFloat(savedTime);
+        }
+    };
+
+    if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(hlsSource);
+        hls.attachMedia(videoElement);
+
+        videoElement.addEventListener('ended', () => {
+            hls.loadSource(hlsSource);
+            videoElement.play(); // Replay video
+        });
+
+        // Sauvegarder le temps de lecture
+        videoElement.addEventListener('timeupdate', () => {
+            localStorage.setItem(storageKey, videoElement.currentTime);
+        });
+
+        loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+        // Fallback for native HLS support (Safari)
+        videoElement.src = hlsSource;
+        videoElement.addEventListener('ended', () => {
+            videoElement.play(); // Replay video
+        });
+        loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+    }
+});
+</script>  
 
 
       </div>
